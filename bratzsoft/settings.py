@@ -43,7 +43,7 @@ IGNORABLE_404_URLS = [
 ]
 
 #Admin Configs
-ADMIN_SITE_HEADER = "BratzSoft"
+ADMIN_SITE_HEADER = "Bratz Soft"
 
 
 
