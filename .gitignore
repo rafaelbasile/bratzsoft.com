@@ -102,6 +102,6 @@ ENV/
 .mypy_cache/
 
 
-.DS_Store/
+*DS_Store*
 staticfiles/
 .venv/
