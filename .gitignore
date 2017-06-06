@@ -23,8 +23,8 @@ var/
 wheels/
 *.egg-info/
 .installed.cfg
+*.egg1
 *.egg
-
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
