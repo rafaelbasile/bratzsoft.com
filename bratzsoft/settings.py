@@ -20,20 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 
-# ENSURE HTTPS Communications
-#https://docs.djangoproject.com/en/1.11/ref/settings/#secure-proxy-ssl-header
-#https://docs.djangoproject.com/en/1.11/ref/settings/#secure-ssl-redirect
-#https://docs.djangoproject.com/en/1.11/ref/settings/#session-cookie-secure
-#https://docs.djangoproject.com/en/1.11/ref/settings/#csrf-cookie-secure
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
-
-
-
 # https://docs.djangoproject.com/en/1.11/ref/settings/#session-expire-at-browser-close
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
@@ -195,3 +181,20 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+
+
+
+# ENSURE HTTPS Communications for Production (DEBUG = False)
+#https://docs.djangoproject.com/en/1.11/ref/settings/#secure-proxy-ssl-header
+#https://docs.djangoproject.com/en/1.11/ref/settings/#secure-ssl-redirect
+#https://docs.djangoproject.com/en/1.11/ref/settings/#session-cookie-secure
+#https://docs.djangoproject.com/en/1.11/ref/settings/#csrf-cookie-secure
+
+if DEBUG == False:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+else:
+    pass
