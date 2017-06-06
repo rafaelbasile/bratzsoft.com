@@ -15,21 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from bratzsoft.core import urls
 
-#Temp
-from bratzsoft.core import views as bratzsoft_views
-
-
+from . import views as bratzsoft_views
 
 urlpatterns = [
     url(r'^$', bratzsoft_views.home),
-    url(r'^core/', include('bratzsoft.core.urls')),
-    url(r'^admin/', admin.site.urls),
 
-
-
-
-    #Django Rest Framework
-    url(r'^api-auth/', include('rest_framework.urls')),
 ]
