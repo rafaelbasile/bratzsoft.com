@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ParamConfig(AppConfig):
-    name = 'param'
+    name = 'bratzsoft.sap.param'

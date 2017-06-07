@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
+import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
@@ -10,19 +11,20 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ('sap', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Customer',
+            name='Parameter',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField()),
                 ('updated_at', models.DateTimeField()),
                 ('active', models.BooleanField(default=True)),
                 ('name', models.CharField(max_length=100)),
-                ('description', models.TextField()),
-                ('email', models.EmailField(max_length=254)),
+                ('value', models.CharField(max_length=100)),
+                ('ref_note', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='sap.Note')),
             ],
             options={
                 'abstract': False,
