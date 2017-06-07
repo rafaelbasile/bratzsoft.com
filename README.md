@@ -3,4 +3,17 @@
 
 
 
-#Vida Remota
+# BratzSoft
+
+
+Soon more info!
+
+# Overview
+
+# How to Contribute
+
+# How to Install
+
+## Requirements
+
+## License
