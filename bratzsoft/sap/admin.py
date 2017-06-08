@@ -1,14 +1,14 @@
 
 from django.contrib import admin
 from django.conf import settings
-from bratzsoft.sap.models import Host, LinkURL, Note, System, LandscapeRole, Category, Product, Component
+from bratzsoft.sap.models import Host, LinkURL, Note, System, LandscapeRole, Category, Product, Component, Parameter, AbapUser
 from bratzsoft.core.models.crmmodels import Customer
 
 
 class HostAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
-    list_display = ('hostname', 'ipv4','customer','active')
-    search_fields = ['hostname','ipv4','customer']
+    list_display = ('hostname', 'customer','ipv4','active')
+    search_fields = ['hostname','customer','ipv4']
 
 class CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
@@ -54,6 +54,22 @@ class ComponentAdmin(admin.ModelAdmin):
     search_fields = ['name','description']
     list_filter = ('name','active')
 
+
+class ParameterAdmin(admin.ModelAdmin):
+    readonly_fields = ('created_at','updated_at')
+    list_display = ('name', 'value',)
+    search_fields = ['name','value',]
+
+class AbapUserAdmin(admin.ModelAdmin):
+    readonly_fields = ('created_at','updated_at')
+    list_display = ('username','sid','client')
+    search_fields = ['username','sid']
+    list_filter = ('sid','active')
+
+
+
+
+
 # Site Header Text
 # TBT To be changed for a settings variable/settings table
 
@@ -71,3 +87,5 @@ admin.site.register(LandscapeRole, LandscapeRoleAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Component, ComponentAdmin)
+admin.site.register(Parameter, ParameterAdmin)
+admin.site.register(AbapUser, AbapUserAdmin)

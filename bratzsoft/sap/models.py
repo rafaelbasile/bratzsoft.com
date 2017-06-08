@@ -53,7 +53,7 @@ class Host(BaseModel):
 
 
 class LinkURL(BaseModel):
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=500,null=True,blank=True)
     link = models.URLField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
@@ -65,16 +65,25 @@ class LinkURL(BaseModel):
     def __str__(self):
         return self.link
 
+class Component(BaseModel):
+    name = models.CharField(max_length=100)
+    description = models.TextField(max_length=500,null=True,blank=True)
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+
+    def __str__(self):
+        return self.name
 
 
 class Note(BaseModel):
     number = models.CharField(max_length=15)
     version = models.CharField(max_length=15)
     title = models.CharField(max_length=200)
-    component = models.CharField(max_length=30)
-    update_date = models.DateTimeField()
-    related_product = models.CharField(max_length=100)
+    component = models.ForeignKey('Component', on_delete=models.CASCADE)
+    update_date = models.DateField()
+    related_product = models.ForeignKey('Product', on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
@@ -97,9 +106,14 @@ class System(BaseModel):
     def __str__(self):
         return self.sid
 
-class Component(BaseModel):
+
+
+
+class Parameter(BaseModel):
     name = models.CharField(max_length=100)
-    description = models.TextField(max_length=500)
+    value = models.CharField(max_length=100)
+    ref_note = models.ForeignKey('sap.Note',on_delete=models.CASCADE)
+
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -107,3 +121,17 @@ class Component(BaseModel):
 
     def __str__(self):
         return self.name
+
+class AbapUser(BaseModel):
+    username = models.CharField(max_length=14)
+    # To be changed - Password need to be encrypted before save
+    password = models.CharField(max_length=10,null=True,blank=True)
+    sid = models.ForeignKey('System', on_delete=models.CASCADE)
+    client = models.CharField(max_length=3,null=True,blank=True)
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+
+    def __str__(self):
+        return self.username
