@@ -5,7 +5,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.routers import DefaultRouter
 
 
-from .views import UserViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, LinkURLViewSet, NoteViewSet
+from .views import UserViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, LinkURLViewSet, NoteViewSet, AbapUserList
 
 
 
