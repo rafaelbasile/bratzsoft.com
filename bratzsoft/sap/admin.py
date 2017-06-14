@@ -44,7 +44,7 @@ class SystemAdmin(admin.ModelAdmin):
 
 class LandscapeRoleAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
-    list_display = ('name',)
+    list_display = ('name','active')
     search_fields = ['name',]
     list_filter = ('active',)
 
