@@ -80,7 +80,8 @@ CUSTOM_APPS = [
 OWN_APPS = [
     'bratzsoft.core',
     'bratzsoft.sap',
-    
+    'bratzsoft.api',
+
     #'bratzsoft.sap.core',
 ]
 

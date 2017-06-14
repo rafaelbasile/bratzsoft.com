@@ -24,6 +24,7 @@ from bratzsoft.core import views as bratzsoft_views
 
 urlpatterns = [
     url(r'^$', bratzsoft_views.home),
+    url(r'^api/', include('bratzsoft.api.urls')),
     url(r'^core/', include('bratzsoft.core.urls')),
     url(r'^sap/', include('bratzsoft.sap.urls')),
     url(r'^admin/', admin.site.urls),

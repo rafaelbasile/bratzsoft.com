@@ -24,7 +24,7 @@ class LinkURLAdmin(admin.ModelAdmin):
 
 class NoteAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
-    list_display = ('number', 'title', 'category','component','active')
+    list_display = ('number', 'title', 'component','category','update_date','active')
     search_fields = ['number','title','category','component']
     list_filter = ('category', 'component','active')
 
