@@ -39,6 +39,19 @@ EMAIL_HOST_USER = config('SMTP_USER', default='')
 EMAIL_HOST_PASSWORD = config('SMTP_PASSWORD', default='')
 EMAIL_USE_TLS = config('SMTP_TLS', default=False)
 EMAIL_USE_SSL = config('SMTP_SSL', default=True)
+CONTACT_EMAIL = config('CONTACT_MAIL', default=[('Contact', 'contact@bratzsoft.com')])
+
+
+# E-mails
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#DEFAULT_FROM_EMAIL = 'Nome <ebratz@gmail.com>'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'senha'
+# EMAIL_PORT = 587
+
+
 
 # Ignore 404 errors if from the Regular Expressions Below
 
@@ -51,7 +64,11 @@ IGNORABLE_404_URLS = [
 #Admin Configs
 ADMIN_SITE_HEADER = "BratzSoft"
 
-
+# Auth
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'core:home'
+LOGOUT_URL = 'accounts:logout'
+AUTH_USER_MODEL = 'accounts.User'
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -82,6 +99,9 @@ OWN_APPS = [
     'bratzsoft.sap',
     'bratzsoft.api',
 
+    'bratzsoft.accounts',
+    'bratzsoft.courses',
+
     #'bratzsoft.sap.core',
 ]
 
@@ -97,6 +117,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]

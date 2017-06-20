@@ -13,25 +13,46 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+
+
+
+#from bratzsoft.core import views as bratzsoft_views
+
+
+
+#urlpatterns = [
+#    url(r'^$', bratzsoft_views.home),
+#    url(r'^api/', include('bratzsoft.api.urls')),
+#    url(r'^core/', include('bratzsoft.core.urls')),
+#    url(r'^sap/', include('bratzsoft.sap.urls')),
+#    url(r'^admin/', admin.site.urls),
+#
+#
+#
+#
+#    #Django Rest Framework
+#    url(r'^api-auth/', include('rest_framework.urls')),
+#]
+
+
+from django.conf.urls import include, url
 from django.contrib import admin
-from bratzsoft.core import urls
+from django.conf import settings
+from django.conf.urls.static import static
+#from bratzsoft.core import urls
+#from bratzsoft.accounts import urls
 
-
-from bratzsoft.core import views as bratzsoft_views
-
-
+admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', bratzsoft_views.home),
-    url(r'^api/', include('bratzsoft.api.urls')),
-    url(r'^core/', include('bratzsoft.core.urls')),
-    url(r'^sap/', include('bratzsoft.sap.urls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^', include('bratzsoft.core.urls', namespace='core')),
+    url(r'^account/', include('bratzsoft.accounts.urls', namespace='accounts')),
+    url(r'^courses/', include('bratzsoft.accounts.urls', namespace='courses')),
 
-
-
-
-    #Django Rest Framework
-    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^admin/', include(admin.site.urls)),
 ]
+
+#if settings.DEBUG:
+#    urlpatterns += static(
+#        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+#    )
