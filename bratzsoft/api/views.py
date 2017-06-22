@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth.models import User
+from bratzsoft.accounts.models import User
 
 from rest_framework import generics, viewsets
 
