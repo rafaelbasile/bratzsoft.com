@@ -1,2 +1,2 @@
-from .test_views import ContactCourseTestCase
-from .test_models import CourseManagerTestCase
+#from .test_views import ContactCourseTestCase
+#from .test_models import CourseManagerTestCase
