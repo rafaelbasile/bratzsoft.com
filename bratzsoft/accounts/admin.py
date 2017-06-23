@@ -34,12 +34,23 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import User
+from bratzsoft.accounts.models import Customer
+
 
 class UserAdmin(admin.ModelAdmin):
     readonly_fields = ()
     #list_display = ('username','sid','client')
     #search_fields = ['username','sid']
     #list_filter = ('sid','active')
+
+
+# Register your models here.
+class CustomerAdmin(admin.ModelAdmin):
+    readonly_fields = ('created_at','updated_at')
+    list_display = ('name', 'email', 'description','active')
+    search_fields = ['name','email']
+
+
 
 
 
@@ -50,3 +61,4 @@ class UserAdmin(admin.ModelAdmin):
 #Admin Registrations
 
 admin.site.register(User, UserAdmin)
+admin.site.register(Customer, CustomerAdmin)

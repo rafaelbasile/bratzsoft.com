@@ -5,14 +5,14 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.routers import DefaultRouter
 
 
-from .views import UserViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, LinkURLViewSet, NoteViewSet, AbapUserList
+from .views import CustomerViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, LinkURLViewSet, NoteViewSet, AbapUserList
 
 
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
 #router.register()
-router.register(r'users', UserViewSet)
+router.register(r'customers', CustomerViewSet)
 
 
 

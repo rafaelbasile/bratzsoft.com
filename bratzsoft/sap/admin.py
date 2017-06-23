@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.conf import settings
 from bratzsoft.sap.models import Host, LinkURL, Note, System, LandscapeRole, Category, Product, Component, Parameter, AbapUser
-from bratzsoft.core.models.crmmodels import Customer
+from bratzsoft.accounts.models import Customer
 
 
 class HostAdmin(admin.ModelAdmin):

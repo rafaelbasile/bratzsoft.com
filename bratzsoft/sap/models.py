@@ -1,6 +1,6 @@
 from django.db import models
-from bratzsoft.core.models.coremodels import BaseModel
-from bratzsoft.core.models.crmmodels import Customer
+from bratzsoft.core.models import BaseModel
+from bratzsoft.accounts.models import Customer
 
 
 class LandscapeRole(BaseModel):
@@ -42,7 +42,7 @@ class Product(BaseModel):
 class Host(BaseModel):
     hostname = models.CharField(max_length=100)
     ipv4 = models.GenericIPAddressField()
-    customer = models.ForeignKey('core.Customer', on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -95,7 +95,7 @@ class Note(BaseModel):
 class System(BaseModel):
     sid = models.CharField(max_length=3)
     instance_number = models.CharField(max_length=2)
-    customer = models.ForeignKey('core.Customer', on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     hosts = models.ManyToManyField(Host)
     landscape_role = models.ForeignKey('LandscapeRole', on_delete=models.CASCADE)
 
@@ -105,8 +105,6 @@ class System(BaseModel):
 
     def __str__(self):
         return self.sid
-
-
 
 
 class Parameter(BaseModel):

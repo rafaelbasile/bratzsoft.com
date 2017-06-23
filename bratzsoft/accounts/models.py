@@ -5,6 +5,7 @@ from django.core import validators
 from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin,
     UserManager)
 from django.conf import settings
+from bratzsoft.core.models import BaseModel
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -57,3 +58,21 @@ class PasswordReset(models.Model):
         verbose_name = 'Nova Senha'
         verbose_name_plural = 'Novas Senhas'
         ordering = ['-created_at']
+
+
+
+
+class Customer(BaseModel):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    email = models.EmailField()
+    account = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
+    #user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+
+    def __str__(self):
+        return self.name
