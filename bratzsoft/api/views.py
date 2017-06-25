@@ -12,8 +12,6 @@ class CustomerList(generics.ListAPIView):
     serializer_class = CustomerSerializer
 
 
-
-
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
