@@ -9,4 +9,4 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         depth =  1
         #fields = ['id','username',  'client', 'active']
-        exclude = ['created_at',]
+        exclude = ['id','created_at','user']
