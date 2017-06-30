@@ -55,7 +55,7 @@ class Host(BaseModel):
 class LinkURL(BaseModel):
     description = models.TextField(max_length=500,null=True,blank=True)
     link = models.URLField()
-    category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 
     def save(self, *args, **kwargs):
@@ -78,13 +78,15 @@ class Component(BaseModel):
 
 
 class Note(BaseModel):
-    number = models.CharField(max_length=15)
-    version = models.CharField(max_length=15)
+    number = models.PositiveIntegerField()
+    version = models.PositiveIntegerField()
     title = models.CharField(max_length=200)
-    component = models.ForeignKey('Component', on_delete=models.CASCADE)
-    update_date = models.DateField()
-    related_product = models.ForeignKey('Product', on_delete=models.CASCADE)
-    category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    component = models.ForeignKey(Component, on_delete=models.CASCADE)
+    relesed_on = models.DateField()
+    related_product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    priority = models.CharField(max_length=200)
+    link = models.ForeignKey(LinkURL, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
             super().save(*args, **kwargs)
@@ -92,12 +94,12 @@ class Note(BaseModel):
     def __str__(self):
         return "%s - %s" % (self.number, self.title)
 
-class System(BaseModel):
+class SAPSystem(BaseModel):
     sid = models.CharField(max_length=3)
     instance_number = models.CharField(max_length=2)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     hosts = models.ManyToManyField(Host)
-    landscape_role = models.ForeignKey('LandscapeRole', on_delete=models.CASCADE)
+    landscape_role = models.ForeignKey(LandscapeRole, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
@@ -110,7 +112,7 @@ class System(BaseModel):
 class Parameter(BaseModel):
     name = models.CharField(max_length=100)
     value = models.CharField(max_length=100)
-    ref_note = models.ForeignKey('sap.Note',on_delete=models.CASCADE)
+    ref_note = models.ForeignKey(Note,on_delete=models.CASCADE)
 
 
     def save(self, *args, **kwargs):
@@ -124,7 +126,7 @@ class AbapUser(BaseModel):
     username = models.CharField(max_length=14)
     # To be changed - Password need to be encrypted before save
     password = models.CharField(max_length=10,null=True,blank=True)
-    sid = models.ForeignKey('System', on_delete=models.CASCADE)
+    sap_system = models.ForeignKey(SAPSystem, on_delete=models.CASCADE)
     client = models.CharField(max_length=3,null=True,blank=True)
 
     def save(self, *args, **kwargs):

@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.conf import settings
-from bratzsoft.sap.models import Host, LinkURL, Note, System, LandscapeRole, Category, Product, Component, Parameter, AbapUser
+from bratzsoft.sap.models import Host, LinkURL, Note, SAPSystem, LandscapeRole, Category, Product, Component, Parameter, AbapUser
 from bratzsoft.accounts.models import Customer
 
 
@@ -24,8 +24,8 @@ class LinkURLAdmin(admin.ModelAdmin):
 
 class NoteAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
-    list_display = ('number', 'title', 'component','category','update_date','active')
-    search_fields = ['number','title','category','component']
+    list_display = ('number', 'version','title', 'component','category','relesed_on','active')
+    search_fields = ['number','version','title','category','component']
     list_filter = ('category', 'component','active')
 
 
@@ -35,7 +35,7 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ['name','version']
 
 
-class SystemAdmin(admin.ModelAdmin):
+class SAPSystemAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
     list_display = ('sid', 'instance_number', 'customer','active')
     search_fields = ['sid','customer']
@@ -62,9 +62,9 @@ class ParameterAdmin(admin.ModelAdmin):
 
 class AbapUserAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
-    list_display = ('username','sid','client')
-    search_fields = ['username','sid']
-    list_filter = ('sid','active')
+    list_display = ('username','sap_system','client')
+    search_fields = ['username','sap_system']
+    list_filter = ('sap_system','active')
 
 
 
@@ -82,7 +82,7 @@ admin.site.site_header = settings.ADMIN_SITE_HEADER
 admin.site.register(Host, HostAdmin)
 admin.site.register(LinkURL, LinkURLAdmin)
 admin.site.register(Note, NoteAdmin)
-admin.site.register(System, SystemAdmin)
+admin.site.register(SAPSystem, SAPSystemAdmin)
 admin.site.register(LandscapeRole, LandscapeRoleAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
