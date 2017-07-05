@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 
+
 from . import views as core_views
 
 
 urlpatterns=[
     url(r'^$', core_views.home, name='home'),
+
     url(r'^list/$', core_views.list, name='list'),
     url(r'^contact-us/$', core_views.contact, name='contact'),
 ]
