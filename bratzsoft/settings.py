@@ -75,7 +75,7 @@ AUTH_USER_MODEL = 'accounts.User'
 SECRET_KEY = config('SECRET_KEY', default='PleaseChangeThisKey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['bratzsoft.com', 'www.bratzsoft.com', 'localhost','bratzsoft.herokuapp.com','bratzsoft-ebratz.c9users.io',]
 
@@ -226,7 +226,7 @@ REST_FRAMEWORK = {
 #https://docs.djangoproject.com/en/1.11/ref/settings/#session-cookie-secure
 #https://docs.djangoproject.com/en/1.11/ref/settings/#csrf-cookie-secure
 
-if DEBUG == False:
+if DEBUG == True:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
