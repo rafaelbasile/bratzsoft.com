@@ -12,11 +12,13 @@ from .views import CustomerViewSet, AbapUserViewSet, CategoryViewSet, ComponentV
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
 #router.register()
+
+# Register CRM Settings
 router.register(r'customers', CustomerViewSet)
 
 
 
-
+# Register SAP Settings
 router.register(r'abapusers', AbapUserViewSet)
 router.register(r'categories', CategoryViewSet)
 router.register(r'components', ComponentViewSet)
