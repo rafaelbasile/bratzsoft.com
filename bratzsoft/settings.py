@@ -75,9 +75,9 @@ AUTH_USER_MODEL = 'accounts.User'
 SECRET_KEY = config('SECRET_KEY', default='PleaseChangeThisKey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['bratzsoft.com', 'www.bratzsoft.com', 'localhost','bratzsoft.herokuapp.com','bratzsoft-ebratz.c9users.io',]
+ALLOWED_HOSTS = ['127.0.0.1', 'bratzsoft.com', 'www.bratzsoft.com', 'localhost','bratzsoft.herokuapp.com','bratzsoft-ebratz.c9users.io',]
 
 
 # Application definition
@@ -92,6 +92,7 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 OWN_APPS = [
@@ -202,11 +203,11 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.IsAuthenticated',
 
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
 #    'DEFAULT_RENDERER_CLASSES':[
 #        'rest_framework.renderers.JSONRenderer',
@@ -226,7 +227,7 @@ REST_FRAMEWORK = {
 #https://docs.djangoproject.com/en/1.11/ref/settings/#session-cookie-secure
 #https://docs.djangoproject.com/en/1.11/ref/settings/#csrf-cookie-secure
 
-if DEBUG == True:
+if DEBUG == False:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True

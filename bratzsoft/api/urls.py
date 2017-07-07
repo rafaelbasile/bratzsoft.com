@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 
 
 from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.authtoken import views as drf_views
 from rest_framework.routers import DefaultRouter
 
 
@@ -31,8 +32,10 @@ router.register(r'notes', NoteViewSet)
 
 
 helper_patterns = [
+    
+    url(r'^api-token-auth/', drf_views.obtain_auth_token),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
     #url(r'^sap/', include(UserList.as_view()),
     #url(r'^users/', UserList.as_view()),
     #url(r'^users/(?P<pk>[0-9]+)/$', AbapUserDetail.as_view()),
