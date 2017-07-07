@@ -48,7 +48,7 @@ urlpatterns = [
     url(r'^', include('bratzsoft.core.urls', namespace='core')),
     url(r'^account/', include('bratzsoft.accounts.urls', namespace='accounts')),
     url(r'^courses/', include('bratzsoft.accounts.urls', namespace='courses')),
-    url(r'^api/', include('bratzsoft.api.urls')),
+    url(r'^api/v1/', include('bratzsoft.api.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
 
