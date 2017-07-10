@@ -11,43 +11,32 @@ from .views import CustomerViewSet, AbapUserViewSet, CategoryViewSet, ComponentV
 
 
 # Create a router and register our viewsets with it.
-router = DefaultRouter()
-#router.register()
-
-# Register CRM Settings
-router.register(r'customers', CustomerViewSet)
+corerouter = DefaultRouter()
+corerouter.register(r'customers', CustomerViewSet)
 
 
 
 # Register SAP Settings
-router.register(r'abapusers', AbapUserViewSet)
-router.register(r'categories', CategoryViewSet)
-router.register(r'components', ComponentViewSet)
-router.register(r'hosts', HostViewSet)
-router.register(r'landscaperoles', LandscapeRoleViewSet)
-router.register(r'links', LinkURLViewSet)
-router.register(r'notes', NoteViewSet)
+saprouter = DefaultRouter()
+saprouter.register(r'abapusers', AbapUserViewSet)
+saprouter.register(r'categories', CategoryViewSet)
+saprouter.register(r'components', ComponentViewSet)
+saprouter.register(r'hosts', HostViewSet)
+saprouter.register(r'landscaperoles', LandscapeRoleViewSet)
+saprouter.register(r'links', LinkURLViewSet)
+saprouter.register(r'notes', NoteViewSet)
 
 
 
 
-helper_patterns = [
-    url(r'^v1/', include(router.urls)),
+
+urlpatterns = [
+    
     url(r'^access_token/', drf_views.obtain_auth_token),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^', include(router.urls)),
-
-    #url(r'^sap/', include(UserList.as_view()),
-    #url(r'^users/', UserList.as_view()),
-    #url(r'^users/(?P<pk>[0-9]+)/$', AbapUserDetail.as_view()),
+    url(r'^', include(corerouter.urls)),
+    url(r'^sap/', include(saprouter.urls)),
 
 
-    #url(r'^abapusers/', AbapUserList.as_view()),
-    #url(r'^abapusers/(?P<pk>[0-9]+)/$', AbapUserDetail.as_view()),
-
-    #url(r'^categories/', CategoryList.as_view()),
-    #url(r'^categories/(?P<pk>[0-9]+)/$', CategoryDetail.as_view()),
 ]
 
-urlpatterns = helper_patterns
-#urlpatterns = format_suffix_patterns(urlpatterns)

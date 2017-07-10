@@ -1,3 +1,12 @@
 from django.db import models
 
-# Create your models here.
+from bratzsoft.core.models import BaseModel
+
+
+class Post(BaseModel):
+	pass
+
+
+class Blog(BaseModel):
+	pass
+	

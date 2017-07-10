@@ -20,7 +20,6 @@ class Category(BaseModel):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.name
     class Meta:
@@ -32,7 +31,6 @@ class Product(BaseModel):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
 
     def __str__(self):
         return "%s - %s" % (self.name, self.version)
@@ -47,7 +45,6 @@ class Host(BaseModel):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.hostname
 
@@ -61,9 +58,9 @@ class LinkURL(BaseModel):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.link
+
 
 class Component(BaseModel):
     name = models.CharField(max_length=100)

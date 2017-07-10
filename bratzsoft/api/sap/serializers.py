@@ -4,11 +4,7 @@ from rest_framework import serializers
 from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, LinkURL, Note
 
 class AbapUserSerializer(serializers.ModelSerializer):
-    #sid = serializers.PrimaryKeyRelatedField(
-    #    many=True,
-    #    read_only=True,
-    #
-    #)
+
     class Meta:
         model = AbapUser
         depth = 2

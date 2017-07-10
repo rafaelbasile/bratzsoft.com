@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from bratzsoft.accounts.models import Customer
 
 from rest_framework import generics, viewsets
 
+from bratzsoft.accounts.models import Customer
 from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, LinkURL, Note
 from bratzsoft.api.sap.serializers import AbapUserSerializer, CategorySerializer, ComponentSerializer, HostSerializer,LandscapeRoleSerializer, linkURLSerializer, NoteSerializer
 from bratzsoft.api.accounts.serializers import CustomerSerializer
+
+
 
 class CustomerList(generics.ListAPIView):
     queryset = Customer.objects.all()
