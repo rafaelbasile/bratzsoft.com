@@ -3,9 +3,13 @@ import re
 from django.db import models
 from django.core import validators
 from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin,
-    UserManager)
+                                        UserManager)
 from django.conf import settings
+
+
 from bratzsoft.core.models import BaseModel
+
+from tenant_schemas.models import TenantMixin
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -13,8 +17,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(
         'Nome de Usuário', max_length=30, unique=True,
         validators=[validators.RegexValidator(re.compile('^[\w.@+-]+$'),
-            'O nome de usuário só pode conter letras, digitos ou os '
-            'seguintes caracteres: @/./+/-/_', 'invalid')]
+                                              'Name can only contain letters, digits or the'
+                                              'following characters: @/./+/-/_', 'invalid')]
     )
     email = models.EmailField('E-mail', unique=True)
     name = models.CharField('Nome', max_length=100, blank=True)
@@ -60,8 +64,6 @@ class PasswordReset(models.Model):
         ordering = ['-created_at']
 
 
-
-
 class Customer(BaseModel):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -69,10 +71,18 @@ class Customer(BaseModel):
     #account = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
 
-
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.name
+
+
+class Subscription(TenantMixin):
+    name = models.CharField(max_length=100)
+    paid_until = models.DateField()
+    on_trial = models.BooleanField()
+    created_on = models.DateField(auto_now_add=True)
+
+    # default true, schema will be automatically created and synced when it is saved
+    auto_create_schema = True

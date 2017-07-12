@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.six import with_metaclass
 import datetime
 
+
 class BaseModel(models.Model):
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
@@ -9,7 +10,6 @@ class BaseModel(models.Model):
 
     class Meta:
         abstract = True
-
 
     def save(self, *args, **kwargs):
         if not self.created_at:
