@@ -71,6 +71,7 @@ AUTH_USER_MODEL = 'accounts.User'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY', default='PleaseChangeThisKey')
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
@@ -88,8 +89,10 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
+    'tenant_schemas',
     'rest_framework',
     'rest_framework.authtoken',
+    
 ]
 
 OWN_APPS = [
@@ -104,7 +107,19 @@ OWN_APPS = [
 ]
 
 
-INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + OWN_APPS
+INSTALLED_APPS =  CUSTOM_APPS + DJANGO_APPS + OWN_APPS
+
+
+
+
+SHARED_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
+
+TENANT_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
+
+
+TENANT_MODEL = "accounts.Customer" # app.Model
+DEFAULT_FILE_STORAGE = 'tenant_schemas.storage.TenantFileSystemStorage'
+
 
 
 MIDDLEWARE_CLASSES = [
@@ -135,13 +150,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
+        
     },
 ]
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.request',
-    
-)
+
 
 
 WSGI_APPLICATION = 'bratzsoft.wsgi.application'
@@ -150,7 +163,7 @@ WSGI_APPLICATION = 'bratzsoft.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+default_dburl = 'postgres://ebratz@localhost/bratzsoft'
 
 # DATABASES = {
 #
@@ -159,12 +172,25 @@ default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 # }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'tenant_schemas.postgresql_backend',
-        # ..
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'tenant_schemas.postgresql_backend',
+#        'NAME': '',
+#        'USERNAME': '',
+#        ''
+#    }
+#
+
+
+DATABASES = { 
+    'default': config('DATABASE_URL', default=default_dburl, cast=dburl)     
     }
-}
+
+DATABASES['default']['ENGINE'] = 'tenant_schemas.postgresql_backend'
+
+
+
+
 
 DATABASE_ROUTERS = (
     'tenant_schemas.routers.TenantSyncRouter',
@@ -212,7 +238,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticsfiles')
 
 
 # Django Rest Framework
-
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -246,3 +271,5 @@ if DEBUG == False:
     CSRF_COOKIE_SECURE = True
 else:
     pass
+
+

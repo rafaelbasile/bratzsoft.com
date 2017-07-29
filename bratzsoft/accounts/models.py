@@ -64,18 +64,26 @@ class PasswordReset(models.Model):
         ordering = ['-created_at']
 
 
-class Customer(BaseModel):
+class Customer(BaseModel, TenantMixin):
     name = models.CharField(max_length=100)
     description = models.TextField()
     email = models.EmailField()
-    #account = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+    #account = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
+
+    # default true, schema will be automatically created and synced when it is saved
+    auto_create_schema = True
+    
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
+
+
+
+
 
 
 class Subscription(TenantMixin):

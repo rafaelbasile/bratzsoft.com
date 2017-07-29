@@ -2,6 +2,7 @@ dj-database-url==0.4.2
 dj-static==0.0.6
 Django==1.11.2
 django-filter==1.0.4
+django-tenant-schemas==1.9.0
 djangorestframework==3.6.3
 flake8==3.3.0
 flake8-pep257==1.0.5
