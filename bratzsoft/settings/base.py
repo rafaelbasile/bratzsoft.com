@@ -89,7 +89,7 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
-    'tenant_schemas',
+    #'tenant_schemas',
     'rest_framework',
     'rest_framework.authtoken',
     
@@ -112,13 +112,13 @@ INSTALLED_APPS =  CUSTOM_APPS + DJANGO_APPS + OWN_APPS
 
 
 
-SHARED_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
+#SHARED_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
 
-TENANT_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
+#TENANT_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
 
 
-TENANT_MODEL = "accounts.Customer" # app.Model
-DEFAULT_FILE_STORAGE = 'tenant_schemas.storage.TenantFileSystemStorage'
+#TENANT_MODEL = "accounts.Customer" # app.Model
+#DEFAULT_FILE_STORAGE = 'tenant_schemas.storage.TenantFileSystemStorage'
 
 
 
@@ -164,14 +164,12 @@ WSGI_APPLICATION = 'bratzsoft.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-default_dburl = 'postgres://ebratz@localhost/bratzsoft'
 
-# DATABASES = {
-#
-#   'default':
-#
-# }
+# Default Database When using Postgres
+# default_dburl = 'postgres://ebratz@localhost/bratzsoft'
 
+
+default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
 #DATABASES = {
 #    'default': {
@@ -187,15 +185,16 @@ DATABASES = {
     'default': config('DATABASE_URL', default=default_dburl, cast=dburl)     
     }
 
-DATABASES['default']['ENGINE'] = 'tenant_schemas.postgresql_backend'
+# Only use when forcing use Tenant Schemas
+#DATABASES['default']['ENGINE'] = 'tenant_schemas.postgresql_backend'
 
 
 
 
-
-DATABASE_ROUTERS = (
-    'tenant_schemas.routers.TenantSyncRouter',
-)
+#Only Needed with Tenant Schemas
+#DATABASE_ROUTERS = (
+#    'tenant_schemas.routers.TenantSyncRouter',
+#)
 
 
 # Password validation

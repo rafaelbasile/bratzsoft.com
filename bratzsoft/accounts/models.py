@@ -9,7 +9,7 @@ from django.conf import settings
 
 from bratzsoft.core.models import BaseModel
 
-from tenant_schemas.models import TenantMixin
+#from tenant_schemas.models import TenantMixin
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -64,7 +64,7 @@ class PasswordReset(models.Model):
         ordering = ['-created_at']
 
 
-class Customer(BaseModel, TenantMixin):
+class Customer(BaseModel):
     name = models.CharField(max_length=100)
     description = models.TextField()
     email = models.EmailField()
@@ -72,7 +72,7 @@ class Customer(BaseModel, TenantMixin):
     #account = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
 
     # default true, schema will be automatically created and synced when it is saved
-    auto_create_schema = True
+    #auto_create_schema = True
     
 
     def save(self, *args, **kwargs):
@@ -86,11 +86,11 @@ class Customer(BaseModel, TenantMixin):
 
 
 
-class Subscription(TenantMixin):
+class Subscription():
     name = models.CharField(max_length=100)
     paid_until = models.DateField()
     on_trial = models.BooleanField()
     created_on = models.DateField(auto_now_add=True)
 
     # default true, schema will be automatically created and synced when it is saved
-    auto_create_schema = True
+    #auto_create_schema = True
