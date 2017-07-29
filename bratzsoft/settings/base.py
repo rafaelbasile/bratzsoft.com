@@ -123,7 +123,8 @@ DEFAULT_FILE_STORAGE = 'tenant_schemas.storage.TenantFileSystemStorage'
 
 
 MIDDLEWARE_CLASSES = [
-    'tenant_schemas.middleware.DefaultTenantMiddleware',
+    # Enable only after Tenant Schemas is working
+    #'tenant_schemas.middleware.DefaultTenantMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
