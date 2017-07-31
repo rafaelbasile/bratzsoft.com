@@ -75,21 +75,24 @@ class Component(BaseModel):
 
 
 class Note(BaseModel):
+    
+
+
     number = models.PositiveIntegerField()
     version = models.PositiveIntegerField()
     title = models.CharField(max_length=200)
     component = models.ForeignKey(Component, on_delete=models.CASCADE)
     relesed_on = models.DateField()
-    related_product = models.ForeignKey(Product, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    priority = models.CharField(max_length=200)
-    link = models.ForeignKey(LinkURL, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
             super().save(*args, **kwargs)
 
     def __str__(self):
         return "%s - %s" % (self.number, self.title)
+
+
+
 
 class SAPSystem(BaseModel):
     sid = models.CharField(max_length=3)

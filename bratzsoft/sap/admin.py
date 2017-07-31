@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.conf import settings
-from bratzsoft.sap.models import Host, LinkURL, Note, SAPSystem, LandscapeRole, Category, Product, Component, Parameter, AbapUser
+from bratzsoft.sap.models import Host, Note, SAPSystem, LandscapeRole, Category, Component, Parameter, AbapUser
 from bratzsoft.accounts.models import Customer
 
 
@@ -16,23 +16,23 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ['name',]
 
 
-class LinkURLAdmin(admin.ModelAdmin):
-    readonly_fields = ('created_at','updated_at')
-    list_display = ('link','category','active')
-    search_fields = ['link','category',]
-    list_filter = ('link', 'category',)
+# class LinkURLAdmin(admin.ModelAdmin):
+#     readonly_fields = ('created_at','updated_at')
+#     list_display = ('link','category','active')
+#     search_fields = ['link','category',]
+#     list_filter = ('link', 'category',)
 
 class NoteAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
-    list_display = ('number', 'version','title', 'component','category','relesed_on','active')
+    list_display = ('number', 'version','title', 'component','category','relesed_on','active',)
     search_fields = ['number','version','title','category','component']
     list_filter = ('category', 'component','active')
 
 
-class ProductAdmin(admin.ModelAdmin):
-    readonly_fields = ('created_at','updated_at')
-    list_display = ('name', 'version',)
-    search_fields = ['name','version']
+# class ProductAdmin(admin.ModelAdmin):
+#     readonly_fields = ('created_at','updated_at')
+#     list_display = ('name', 'version',)
+#     search_fields = ['name','version']
 
 
 class SAPSystemAdmin(admin.ModelAdmin):
@@ -80,12 +80,12 @@ admin.site.site_header = settings.ADMIN_SITE_HEADER
 #Admin Registrations
 
 admin.site.register(Host, HostAdmin)
-admin.site.register(LinkURL, LinkURLAdmin)
+#admin.site.register(LinkURL, LinkURLAdmin)
 admin.site.register(Note, NoteAdmin)
 admin.site.register(SAPSystem, SAPSystemAdmin)
 admin.site.register(LandscapeRole, LandscapeRoleAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Product, ProductAdmin)
+#admin.site.register(Product, ProductAdmin)
 admin.site.register(Component, ComponentAdmin)
 admin.site.register(Parameter, ParameterAdmin)
 admin.site.register(AbapUser, AbapUserAdmin)
