@@ -25,15 +25,15 @@ class Category(BaseModel):
     class Meta:
         verbose_name_plural = "categories"
 
-class Product(BaseModel):
-    name = models.CharField(max_length=200)
-    version = models.CharField(max_length=30)
+# class Product(BaseModel):
+#     name = models.CharField(max_length=200)
+#     version = models.CharField(max_length=30)
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+#     def save(self, *args, **kwargs):
+#         super().save(*args, **kwargs)
 
-    def __str__(self):
-        return "%s - %s" % (self.name, self.version)
+#     def __str__(self):
+#         return "%s - %s" % (self.name, self.version)
 
 
 
@@ -49,17 +49,17 @@ class Host(BaseModel):
         return self.hostname
 
 
-class LinkURL(BaseModel):
-    description = models.TextField(max_length=500,null=True,blank=True)
-    link = models.URLField()
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+# class LinkURL(BaseModel):
+#     description = models.TextField(max_length=500,null=True,blank=True)
+#     link = models.URLField()
+#     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+#     def save(self, *args, **kwargs):
+#         super().save(*args, **kwargs)
 
-    def __str__(self):
-        return self.link
+#     def __str__(self):
+#         return self.link
 
 
 class Component(BaseModel):
