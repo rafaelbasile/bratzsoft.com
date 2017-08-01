@@ -32,21 +32,21 @@ SERVER_EMAIL = config('ERROR_SERVER_EMAIL', default='errors@bratzsoft.com')
 ADMINS = config('ADMINS', default=[('Eduardo Bratz', 'ebratz@gmail.com')])  # [('John', 'john@example.com'), ('Mary', 'mary@example.com')]
 MANAGER = config('MANAGERS', default=[('Eduardo Bratz', 'ebratz@gmail.com')])  # [('John', 'john@example.com'), ('Mary', 'mary@example.com')]
 EMAIL_HOST = config('SMTP_HOST', default='smtp.gmail.com')
-EMAIL_PORT = config('SMTP_PORT', default='465')
+EMAIL_PORT = config('SMTP_PORT', default='587')
 EMAIL_HOST_USER = config('SMTP_USER', default='')
 EMAIL_HOST_PASSWORD = config('SMTP_PASSWORD', default='')
-EMAIL_USE_TLS = config('SMTP_TLS', default=False)
-EMAIL_USE_SSL = config('SMTP_SSL', default=True)
+EMAIL_USE_TLS = config('SMTP_TLS', default=True)
+EMAIL_USE_SSL = config('SMTP_SSL', default=False)
 CONTACT_EMAIL = config('CONTACT_MAIL', default=[('Contact', 'contact@bratzsoft.com')])
 
 
 # E-mails
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# DEFAULT_FROM_EMAIL = 'Nome <ebratz@gmail.com>'
+# DEFAULT_FROM_EMAIL = 'Administrator <email@gmail.com>'
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'email@gmail.com'
-# EMAIL_HOST_PASSWORD = 'senha'
+# EMAIL_HOST_PASSWORD = 'password'
 # EMAIL_PORT = 587
 
 

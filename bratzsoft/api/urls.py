@@ -6,7 +6,7 @@ from rest_framework.authtoken import views as drf_views
 from rest_framework.routers import DefaultRouter
 
 
-from .views import CustomerViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, LinkURLViewSet, NoteViewSet, AbapUserList
+from .views import CustomerViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, NoteViewSet, AbapUserList
 
 
 
@@ -23,7 +23,6 @@ saprouter.register(r'categories', CategoryViewSet)
 saprouter.register(r'components', ComponentViewSet)
 saprouter.register(r'hosts', HostViewSet)
 saprouter.register(r'landscaperoles', LandscapeRoleViewSet)
-saprouter.register(r'links', LinkURLViewSet)
 saprouter.register(r'notes', NoteViewSet)
 
 

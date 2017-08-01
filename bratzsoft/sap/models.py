@@ -9,7 +9,6 @@ class LandscapeRole(BaseModel):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.name
 
@@ -22,19 +21,9 @@ class Category(BaseModel):
 
     def __str__(self):
         return self.name
+
     class Meta:
         verbose_name_plural = "categories"
-
-# class Product(BaseModel):
-#     name = models.CharField(max_length=200)
-#     version = models.CharField(max_length=30)
-
-#     def save(self, *args, **kwargs):
-#         super().save(*args, **kwargs)
-
-#     def __str__(self):
-#         return "%s - %s" % (self.name, self.version)
-
 
 
 class Host(BaseModel):
@@ -64,19 +53,16 @@ class Host(BaseModel):
 
 class Component(BaseModel):
     name = models.CharField(max_length=100)
-    description = models.TextField(max_length=500,null=True,blank=True)
+    description = models.TextField(max_length=500, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
 
     def __str__(self):
         return self.name
 
 
 class Note(BaseModel):
-    
-
 
     number = models.PositiveIntegerField()
     version = models.PositiveIntegerField()
@@ -92,8 +78,6 @@ class Note(BaseModel):
         return "%s - %s" % (self.number, self.title)
 
 
-
-
 class SAPSystem(BaseModel):
     sid = models.CharField(max_length=3)
     instance_number = models.CharField(max_length=2)
@@ -104,7 +88,6 @@ class SAPSystem(BaseModel):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.sid
 
@@ -112,26 +95,24 @@ class SAPSystem(BaseModel):
 class Parameter(BaseModel):
     name = models.CharField(max_length=100)
     value = models.CharField(max_length=100)
-    ref_note = models.ForeignKey(Note,on_delete=models.CASCADE)
-
+    ref_note = models.ForeignKey(Note, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
 
     def __str__(self):
         return self.name
 
+
 class AbapUser(BaseModel):
     username = models.CharField(max_length=14)
     # To be changed - Password need to be encrypted before save
-    password = models.CharField(max_length=10,null=True,blank=True)
+    password = models.CharField(max_length=10, null=True, blank=True)
     sap_system = models.ForeignKey(SAPSystem, on_delete=models.CASCADE)
-    client = models.CharField(max_length=3,null=True,blank=True)
+    client = models.CharField(max_length=3, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
 
     def __str__(self):
         return self.username

@@ -3,8 +3,8 @@ from django.shortcuts import render
 from rest_framework import generics, viewsets
 
 from bratzsoft.accounts.models import Customer
-from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, LinkURL, Note
-from bratzsoft.api.sap.serializers import AbapUserSerializer, CategorySerializer, ComponentSerializer, HostSerializer,LandscapeRoleSerializer, linkURLSerializer, NoteSerializer
+from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, Note
+from bratzsoft.api.sap.serializers import AbapUserSerializer, CategorySerializer, ComponentSerializer, HostSerializer,LandscapeRoleSerializer, NoteSerializer
 from bratzsoft.api.accounts.serializers import CustomerSerializer
 
 
@@ -38,9 +38,6 @@ class LandscapeRoleViewSet(viewsets.ModelViewSet):
     queryset = LandscapeRole.objects.all()
     serializer_class = LandscapeRoleSerializer
 
-class LinkURLViewSet(viewsets.ModelViewSet):
-    queryset = LinkURL.objects.all()
-    serializer_class = linkURLSerializer
 
 class NoteViewSet(viewsets.ModelViewSet):
     queryset = Note.objects.all()
@@ -96,13 +93,6 @@ class LandscapeRoleDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = LandscapeRole.objects.all()
     serializer_class = LandscapeRoleSerializer
 
-class LinkURLList(generics.ListCreateAPIView):
-    queryset = LinkURL.objects.all()
-    serializer_class = linkURLSerializer
-
-class linkURLDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = LinkURL.objects.all()
-    serializer_class = linkURLSerializer
 
 class NoteList(generics.ListCreateAPIView):
     queryset = Note.objects.all()
