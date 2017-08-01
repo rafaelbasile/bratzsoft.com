@@ -27,27 +27,6 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 
-# Admin Email Notifications
-SERVER_EMAIL = config('ERROR_SERVER_EMAIL', default='errors@bratzsoft.com')
-ADMINS = config('ADMINS', default=[('Eduardo Bratz', 'ebratz@gmail.com')])  # [('John', 'john@example.com'), ('Mary', 'mary@example.com')]
-MANAGER = config('MANAGERS', default=[('Eduardo Bratz', 'ebratz@gmail.com')])  # [('John', 'john@example.com'), ('Mary', 'mary@example.com')]
-EMAIL_HOST = config('SMTP_HOST', default='smtp.gmail.com')
-EMAIL_PORT = config('SMTP_PORT', default='587')
-EMAIL_HOST_USER = config('SMTP_USER', default='')
-EMAIL_HOST_PASSWORD = config('SMTP_PASSWORD', default='')
-EMAIL_USE_TLS = config('SMTP_TLS', default=True)
-EMAIL_USE_SSL = config('SMTP_SSL', default=False)
-CONTACT_EMAIL = config('CONTACT_MAIL', default=[('Contact', 'contact@bratzsoft.com')])
-
-
-# E-mails
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# DEFAULT_FROM_EMAIL = 'Administrator <email@gmail.com>'
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'email@gmail.com'
-# EMAIL_HOST_PASSWORD = 'password'
-# EMAIL_PORT = 587
 
 
 # Ignore 404 errors if from the Regular Expressions Below
@@ -75,7 +54,7 @@ SECRET_KEY = config('SECRET_KEY', default='PleaseChangeThisKey')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'bratzsoft.com', 'www.bratzsoft.com', 'localhost', 'bratzsoft.herokuapp.com', 'bratzsoft-ebratz.c9users.io', ]
+ALLOWED_HOSTS = ['127.0.0.1', 'bratzsoft.com', 'www.bratzsoft.com', 'localhost', 'bratzsoft.herokuapp.com']
 
 
 # Application definition
@@ -102,12 +81,10 @@ OWN_APPS = [
 
     'bratzsoft.accounts',
     'bratzsoft.courses',
-
-    #'bratzsoft.sap.core',
 ]
 
 
-INSTALLED_APPS =  CUSTOM_APPS + DJANGO_APPS + OWN_APPS
+INSTALLED_APPS = CUSTOM_APPS + DJANGO_APPS + OWN_APPS
 
 
 
@@ -151,7 +128,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-        
     },
 ]
 
@@ -161,40 +137,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bratzsoft.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-
-# Default Database When using Postgres
-# default_dburl = 'postgres://ebratz@localhost/bratzsoft'
-
-
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'tenant_schemas.postgresql_backend',
-#        'NAME': '',
-#        'USERNAME': '',
-#        ''
-#    }
-#
-
-
-DATABASES = { 
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl)     
-    }
-
-# Only use when forcing use Tenant Schemas
-#DATABASES['default']['ENGINE'] = 'tenant_schemas.postgresql_backend'
-
-
-
-
-#Only Needed with Tenant Schemas
-#DATABASE_ROUTERS = (
-#    'tenant_schemas.routers.TenantSyncRouter',
-#)
 
 
 # Password validation
@@ -271,5 +214,3 @@ if DEBUG == False:
     CSRF_COOKIE_SECURE = True
 else:
     pass
-
-
