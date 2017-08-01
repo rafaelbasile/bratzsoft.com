@@ -20,6 +20,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 from .base import *
 import os
+from dj_database_url import parse as dburl
+
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 

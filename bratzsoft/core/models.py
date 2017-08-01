@@ -14,6 +14,5 @@ class BaseModel(models.Model):
     def save(self, *args, **kwargs):
         if not self.created_at:
             self.created_at = datetime.datetime.now()
-        if not self.updated_at:
-            self.updated_at = datetime.datetime.now()
+        self.updated_at = datetime.datetime.now()
         super().save(*args, **kwargs)
