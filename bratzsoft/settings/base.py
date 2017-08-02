@@ -82,6 +82,7 @@ OWN_APPS = [
 
     'bratzsoft.accounts',
     'bratzsoft.courses',
+    'bratzsoft.investments',
 ]
 
 

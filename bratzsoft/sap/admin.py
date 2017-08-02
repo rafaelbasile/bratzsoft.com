@@ -10,17 +10,12 @@ class HostAdmin(admin.ModelAdmin):
     list_display = ('hostname', 'customer', 'active')
     search_fields = ['hostname', 'customer']
 
+
 class CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
     list_display = ('name', )
     search_fields = ('name', )
 
-
-# class LinkURLAdmin(admin.ModelAdmin):
-#     readonly_fields = ('created_at','updated_at')
-#     list_display = ('link','category','active')
-#     search_fields = ['link','category',]
-#     list_filter = ('link', 'category',)
 
 class NoteAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
@@ -42,6 +37,7 @@ class LandscapeRoleAdmin(admin.ModelAdmin):
     search_fields = ('name', )
     list_filter = ('active',)
 
+
 class ComponentAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
     list_display = ('name',)
@@ -53,6 +49,7 @@ class ParameterAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
     list_display = ('name', 'value', )
     search_fields = ('name', 'value', )
+
 
 class AbapUserAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')

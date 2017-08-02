@@ -17,18 +17,40 @@ class Stock(models.Model):
     activity = models.CharField(max_length=100)
     market_segment = models.CharField(max_length=100)
     listing_segment = models.CharField(max_length=100)
-    site = models.UrlField()
-    head_quarter = models.CharField(max_length=100)
+    #site = models.URLField()
+    #head_quarter = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
     majority = models.CharField(max_length=100)
 
-
+    def __str__(self):
+        return self.symbol
 """
 Stock Model.
 """
 
 
 class StockQuote(models.Model):
-    stock = models.ForeignField(Stock)
+    stock = models.ForeignKey(Stock)
     date = models.DateField()
     value = models.FloatField()
+    
+    def __str__(self):
+        return self.name
+
+
+class Loan(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(blank=True, null=True)
+    date = models.DateField()
+    value = models.FloatField()
+
+    def __str__(self):
+        return self.name
+
+
+
+
+
+
+
+
