@@ -28,7 +28,8 @@ class Category(BaseModel):
 
 class Host(BaseModel):
     hostname = models.CharField(max_length=100)
-    ipv4 = models.GenericIPAddressField()
+    
+    #ipv4 = models.GenericIPAddressField()
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):

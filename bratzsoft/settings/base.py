@@ -69,6 +69,7 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     #'tenant_schemas',
+    'oauth2_provider',
     'rest_framework',
     'rest_framework.authtoken',
     
@@ -189,6 +190,7 @@ REST_FRAMEWORK = {
 
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        #'oauth2_provider.ext.rest_framework.OAuth2Authentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
     #    'DEFAULT_RENDERER_CLASSES':[

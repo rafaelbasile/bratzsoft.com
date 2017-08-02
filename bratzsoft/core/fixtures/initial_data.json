@@ -1,111 +1,1794 @@
 [
 {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "authtoken",
+        "model": "token"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "sap",
+        "model": "abapuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "sap",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "sap",
+        "model": "component"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "sap",
+        "model": "host"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "sap",
+        "model": "landscaperole"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "sap",
+        "model": "linkurl"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "sap",
+        "model": "note"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "sap",
+        "model": "parameter"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "sap",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "sap",
+        "model": "sapsystem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "accounts",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "accounts",
+        "model": "customer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "accounts",
+        "model": "passwordreset"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "courses",
+        "model": "announcement"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "courses",
+        "model": "comment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": {
+        "app_label": "courses",
+        "model": "course"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": {
+        "app_label": "courses",
+        "model": "enrollment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 24,
+    "fields": {
+        "app_label": "courses",
+        "model": "lesson"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 25,
+    "fields": {
+        "app_label": "courses",
+        "model": "material"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 26,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "application"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 27,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "accesstoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 28,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "grant"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 29,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "refreshtoken"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3mb8s35t5ysp66a7acmto583cwc4eldy",
+    "fields": {
+        "session_data": "MjA4YjNjMzE1OTM1NGY3YTczN2FjNmIwMDE0OTg2NzY0ZWEyMmYxNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxZGI4MGYzMzQzOTQxZTkyMmQxZjViYzc2MjJjMDI4ZTM0NWI0MzkzIn0=",
+        "expire_date": "2017-08-15T23:42:12.129Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "z2btks1x5hm3lqtglpp8sdvyg2brfvz1",
+    "fields": {
+        "session_data": "MjA4YjNjMzE1OTM1NGY3YTczN2FjNmIwMDE0OTg2NzY0ZWEyMmYxNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxZGI4MGYzMzQzOTQxZTkyMmQxZjViYzc2MjJjMDI4ZTM0NWI0MzkzIn0=",
+        "expire_date": "2017-08-15T00:31:43.523Z"
+    }
+},
+{
+    "model": "sap.landscaperole",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-02T00:31:29.365Z",
+        "updated_at": "2017-08-02T00:31:29.365Z",
+        "active": true,
+        "name": "Development"
+    }
+},
+{
+    "model": "sap.landscaperole",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:31:37.401Z",
+        "updated_at": "2017-08-02T00:31:37.401Z",
+        "active": true,
+        "name": "Production"
+    }
+},
+{
+    "model": "sap.landscaperole",
+    "pk": 3,
+    "fields": {
+        "created_at": "2017-08-02T00:31:43.767Z",
+        "updated_at": "2017-08-02T00:31:43.767Z",
+        "active": true,
+        "name": "Acceptance"
+    }
+},
+{
+    "model": "sap.landscaperole",
+    "pk": 4,
+    "fields": {
+        "created_at": "2017-08-02T00:31:48.575Z",
+        "updated_at": "2017-08-02T00:31:48.575Z",
+        "active": true,
+        "name": "Training"
+    }
+},
+{
+    "model": "sap.landscaperole",
+    "pk": 5,
+    "fields": {
+        "created_at": "2017-08-02T00:31:53.659Z",
+        "updated_at": "2017-08-02T00:31:53.659Z",
+        "active": true,
+        "name": "Demo"
+    }
+},
+{
+    "model": "sap.category",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:37:17.213Z",
+        "updated_at": "2017-08-02T00:37:22.072Z",
+        "active": true,
+        "name": "Bug"
+    }
+},
+{
+    "model": "sap.category",
+    "pk": 3,
+    "fields": {
+        "created_at": "2017-08-02T00:37:29.198Z",
+        "updated_at": "2017-08-02T00:37:29.198Z",
+        "active": true,
+        "name": "Upgrade Information"
+    }
+},
+{
+    "model": "sap.host",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-02T00:31:20.746Z",
+        "updated_at": "2017-08-02T00:31:20.746Z",
+        "active": true,
+        "hostname": "testenovo",
+        "customer": 1
+    }
+},
+{
+    "model": "sap.host",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:32:05.958Z",
+        "updated_at": "2017-08-02T00:32:05.958Z",
+        "active": true,
+        "hostname": "hostname1",
+        "customer": 1
+    }
+},
+{
+    "model": "sap.host",
+    "pk": 3,
+    "fields": {
+        "created_at": "2017-08-02T00:33:44.584Z",
+        "updated_at": "2017-08-02T00:33:44.584Z",
+        "active": true,
+        "hostname": "petro1.petrobras.com.br",
+        "customer": 3
+    }
+},
+{
+    "model": "sap.host",
+    "pk": 4,
+    "fields": {
+        "created_at": "2017-08-02T00:33:51.579Z",
+        "updated_at": "2017-08-02T00:33:51.579Z",
+        "active": true,
+        "hostname": "petro2.petro.com.br",
+        "customer": 3
+    }
+},
+{
+    "model": "sap.host",
+    "pk": 5,
+    "fields": {
+        "created_at": "2017-08-02T00:34:38.964Z",
+        "updated_at": "2017-08-02T00:34:38.964Z",
+        "active": true,
+        "hostname": "gerd2.gerd.net",
+        "customer": 2
+    }
+},
+{
+    "model": "sap.component",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-01T00:32:07.464Z",
+        "updated_at": "2017-08-01T00:32:07.464Z",
+        "active": true,
+        "name": "ST-MON-BC",
+        "description": ""
+    }
+},
+{
+    "model": "sap.component",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:37:01.240Z",
+        "updated_at": "2017-08-02T00:37:01.240Z",
+        "active": true,
+        "name": "ST-DIA-MDG",
+        "description": "asdasd"
+    }
+},
+{
+    "model": "sap.note",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-01T00:32:17.017Z",
+        "updated_at": "2017-08-02T00:37:41.898Z",
+        "active": true,
+        "number": 123123123,
+        "version": 23,
+        "title": "aisjljaskd k.ajsd asd",
+        "component": 1,
+        "relesed_on": "2017-08-02",
+        "category": 2
+    }
+},
+{
+    "model": "sap.note",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:37:33.378Z",
+        "updated_at": "2017-08-02T00:37:33.378Z",
+        "active": true,
+        "number": 123123,
+        "version": 122,
+        "title": "asdasdasd asd asd asd asd",
+        "component": 2,
+        "relesed_on": "2017-08-02",
+        "category": 3
+    }
+},
+{
+    "model": "sap.sapsystem",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-02T00:32:23.462Z",
+        "updated_at": "2017-08-02T00:32:23.462Z",
+        "active": true,
+        "sid": "GSD",
+        "instance_number": "00",
+        "customer": 2,
+        "landscape_role": 5,
+        "hosts": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "sap.sapsystem",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:34:19.402Z",
+        "updated_at": "2017-08-02T00:34:19.402Z",
+        "active": true,
+        "sid": "PET",
+        "instance_number": "01",
+        "customer": 3,
+        "landscape_role": 4,
+        "hosts": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "sap.sapsystem",
+    "pk": 3,
+    "fields": {
+        "created_at": "2017-08-02T00:34:47.944Z",
+        "updated_at": "2017-08-02T00:34:47.944Z",
+        "active": true,
+        "sid": "PPP",
+        "instance_number": "10",
+        "customer": 2,
+        "landscape_role": 5,
+        "hosts": [
+            5
+        ]
+    }
+},
+{
+    "model": "sap.parameter",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-02T00:32:55.575Z",
+        "updated_at": "2017-08-02T00:32:55.575Z",
+        "active": true,
+        "name": "rdisp/TRACE",
+        "value": "2",
+        "ref_note": 1
+    }
+},
+{
+    "model": "sap.parameter",
+    "pk": 2,
+    "fields": {
+        "created_at": "2017-08-02T00:33:13.362Z",
+        "updated_at": "2017-08-02T00:33:13.362Z",
+        "active": true,
+        "name": "rdisp/max_wp_runtime",
+        "value": "123000",
+        "ref_note": 1
+    }
+},
+{
+    "model": "sap.abapuser",
+    "pk": 1,
+    "fields": {
+        "created_at": "2017-08-02T00:32:31.140Z",
+        "updated_at": "2017-08-02T00:32:31.140Z",
+        "active": true,
+        "username": "XXBTCUSR02",
+        "password": "password",
+        "sap_system": 1,
+        "client": "100"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add Token",
+        "content_type": 1,
+        "codename": "add_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change Token",
+        "content_type": 1,
+        "codename": "change_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete Token",
+        "content_type": 1,
+        "codename": "delete_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 2,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 2,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 2,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 3,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 3,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 3,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 4,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 4,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 4,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can add abap user",
+        "content_type": 7,
+        "codename": "add_abapuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can change abap user",
+        "content_type": 7,
+        "codename": "change_abapuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can delete abap user",
+        "content_type": 7,
+        "codename": "delete_abapuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can add category",
+        "content_type": 8,
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can change category",
+        "content_type": 8,
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can delete category",
+        "content_type": 8,
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add component",
+        "content_type": 9,
+        "codename": "add_component"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change component",
+        "content_type": 9,
+        "codename": "change_component"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete component",
+        "content_type": 9,
+        "codename": "delete_component"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can add host",
+        "content_type": 10,
+        "codename": "add_host"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can change host",
+        "content_type": 10,
+        "codename": "change_host"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can delete host",
+        "content_type": 10,
+        "codename": "delete_host"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can add landscape role",
+        "content_type": 11,
+        "codename": "add_landscaperole"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can change landscape role",
+        "content_type": 11,
+        "codename": "change_landscaperole"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can delete landscape role",
+        "content_type": 11,
+        "codename": "delete_landscaperole"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can add link url",
+        "content_type": 12,
+        "codename": "add_linkurl"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can change link url",
+        "content_type": 12,
+        "codename": "change_linkurl"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can delete link url",
+        "content_type": 12,
+        "codename": "delete_linkurl"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add note",
+        "content_type": 13,
+        "codename": "add_note"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change note",
+        "content_type": 13,
+        "codename": "change_note"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete note",
+        "content_type": 13,
+        "codename": "delete_note"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can add parameter",
+        "content_type": 14,
+        "codename": "add_parameter"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can change parameter",
+        "content_type": 14,
+        "codename": "change_parameter"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can delete parameter",
+        "content_type": 14,
+        "codename": "delete_parameter"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can add product",
+        "content_type": 15,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can change product",
+        "content_type": 15,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can delete product",
+        "content_type": 15,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can add sap system",
+        "content_type": 16,
+        "codename": "add_sapsystem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can change sap system",
+        "content_type": 16,
+        "codename": "change_sapsystem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can delete sap system",
+        "content_type": 16,
+        "codename": "delete_sapsystem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Usu\u00e1rio",
+        "content_type": 17,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Usu\u00e1rio",
+        "content_type": 17,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Usu\u00e1rio",
+        "content_type": 17,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can add customer",
+        "content_type": 18,
+        "codename": "add_customer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can change customer",
+        "content_type": 18,
+        "codename": "change_customer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can delete customer",
+        "content_type": 18,
+        "codename": "delete_customer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can add Nova Senha",
+        "content_type": 19,
+        "codename": "add_passwordreset"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can change Nova Senha",
+        "content_type": 19,
+        "codename": "change_passwordreset"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can delete Nova Senha",
+        "content_type": 19,
+        "codename": "delete_passwordreset"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can add An\u00fancio",
+        "content_type": 20,
+        "codename": "add_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can change An\u00fancio",
+        "content_type": 20,
+        "codename": "change_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can delete An\u00fancio",
+        "content_type": 20,
+        "codename": "delete_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add Coment\u00e1rio",
+        "content_type": 21,
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change Coment\u00e1rio",
+        "content_type": 21,
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete Coment\u00e1rio",
+        "content_type": 21,
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can add Curso",
+        "content_type": 22,
+        "codename": "add_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can change Curso",
+        "content_type": 22,
+        "codename": "change_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can delete Curso",
+        "content_type": 22,
+        "codename": "delete_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can add Inscri\u00e7\u00e3o",
+        "content_type": 23,
+        "codename": "add_enrollment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can change Inscri\u00e7\u00e3o",
+        "content_type": 23,
+        "codename": "change_enrollment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can delete Inscri\u00e7\u00e3o",
+        "content_type": 23,
+        "codename": "delete_enrollment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can add Aula",
+        "content_type": 24,
+        "codename": "add_lesson"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can change Aula",
+        "content_type": 24,
+        "codename": "change_lesson"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can delete Aula",
+        "content_type": 24,
+        "codename": "delete_lesson"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add Mat\u00e9rial",
+        "content_type": 25,
+        "codename": "add_material"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change Mat\u00e9rial",
+        "content_type": 25,
+        "codename": "change_material"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete Mat\u00e9rial",
+        "content_type": 25,
+        "codename": "delete_material"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can add application",
+        "content_type": 26,
+        "codename": "add_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can change application",
+        "content_type": 26,
+        "codename": "change_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can delete application",
+        "content_type": 26,
+        "codename": "delete_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can add access token",
+        "content_type": 27,
+        "codename": "add_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can change access token",
+        "content_type": 27,
+        "codename": "change_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can delete access token",
+        "content_type": 27,
+        "codename": "delete_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can add grant",
+        "content_type": 28,
+        "codename": "add_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can change grant",
+        "content_type": 28,
+        "codename": "change_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can delete grant",
+        "content_type": 28,
+        "codename": "delete_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+        "name": "Can add refresh token",
+        "content_type": 29,
+        "codename": "add_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+        "name": "Can change refresh token",
+        "content_type": 29,
+        "codename": "change_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+        "name": "Can delete refresh token",
+        "content_type": 29,
+        "codename": "delete_refreshtoken"
+    }
+},
+{
     "model": "accounts.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$36000$FNNeQNYBSlfL$VX/An1wxkutc2qoXUl81wkg+oWDFWZpLqIGEoidI164=",
-        "last_login": "2017-06-07T15:08:29.532Z",
+        "password": "pbkdf2_sha256$36000$3cVsORkjJtcy$BFjqQ8yb5tn+ARIU9Ba1fjJUHlr1ZuhizFNlTjPTJbc=",
+        "last_login": "2017-08-01T23:42:12.126Z",
         "is_superuser": true,
         "username": "ebratz",
-        "first_name": "",
-        "last_name": "",
         "email": "ebratz@gmail.com",
-        "is_staff": true,
+        "name": "",
         "is_active": true,
-        "date_joined": "2017-06-07T02:26:00.956Z",
+        "is_staff": true,
+        "date_joined": "2017-08-01T00:31:04.846Z",
         "groups": [],
         "user_permissions": []
     }
 },
 {
-    "model": "accounts.user.user",
+    "model": "accounts.user",
     "pk": 2,
     "fields": {
-        "password": "pbkdf2_sha256$36000$qxkD5lKdMUPy$jFTNNpFN2vxgOE1eGnVRndBEZJdPmmITJN+zchQTJuc=",
+        "password": "key",
         "last_login": null,
-        "is_superuser": false,
-        "username": "operador1",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
+        "is_superuser": true,
+        "username": "key",
+        "email": "key@key.net",
+        "name": "key",
         "is_active": true,
-        "date_joined": "2017-06-07T15:36:04.369Z",
+        "is_staff": true,
+        "date_joined": "2017-08-02T00:39:33.410Z",
         "groups": [],
         "user_permissions": []
     }
 },
 {
-    "model": "accounts.user.user",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$36000$piTLSy9vChwv$DGR2E1g87fS0Gp4lI06n7EYmx54iL6xe2FfCa1krJLo=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "operador2",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2017-06-07T15:36:12.858Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "accounts.user.user",
-    "pk": 4,
-    "fields": {
-        "password": "pbkdf2_sha256$36000$yjDiY9xTYpBu$VwnSi/LsQc1Zy/DeRoYGR4APDJD7zK1tHPNyKk7i4VU=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "operador3",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2017-06-07T15:36:21.156Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "core.customer",
+    "model": "accounts.customer",
     "pk": 1,
     "fields": {
-        "created_at": "2017-06-07T15:08:47.757Z",
-        "updated_at": "2017-06-07T15:08:47.757Z",
+        "created_at": "2017-08-02T00:31:09.396Z",
+        "updated_at": "2017-08-02T00:31:09.396Z",
         "active": true,
-        "name": "ExxonMobil",
-        "description": "ExxonMobil S/A",
-        "email": "exxonmobil@exxonmobil.com"
+        "name": "ExxoSA",
+        "description": "ndiasnd",
+        "email": "naisnd@asdasd.net",
+        "user": 1
     }
 },
 {
-    "model": "core.customer",
+    "model": "accounts.customer",
     "pk": 2,
     "fields": {
-        "created_at": "2017-06-07T15:09:01.895Z",
-        "updated_at": "2017-06-07T15:09:01.895Z",
+        "created_at": "2017-08-02T00:32:18.470Z",
+        "updated_at": "2017-08-02T00:32:18.470Z",
         "active": true,
-        "name": "Gerdau",
-        "description": "Gerdau A\u00e7os",
-        "email": "gerdau@gerdau.com.br"
+        "name": "Gerd",
+        "description": "test",
+        "email": "teste@gerd.net",
+        "user": 1
     }
 },
 {
-    "model": "core.customer",
+    "model": "accounts.customer",
     "pk": 3,
     "fields": {
-        "created_at": "2017-06-07T15:09:21.302Z",
-        "updated_at": "2017-06-07T15:09:21.302Z",
+        "created_at": "2017-08-02T00:33:37.336Z",
+        "updated_at": "2017-08-02T00:33:37.336Z",
         "active": true,
-        "name": "Petrobras",
-        "description": "Petrobras Oil/Gas",
-        "email": "petro@petrobras.br"
+        "name": "Petr",
+        "description": "sadasd",
+        "email": "asd@petro.net",
+        "user": 1
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-08-01T00:32:07.469Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "ST-MON-BC",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-08-01T00:32:14.482Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "123123123",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-08-01T00:32:17.019Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "123123123 - aisjljaskd k.ajsd asd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-08-01T01:56:33.885Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "123123123 - aisjljaskd k.ajsd asd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"relesed_on\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-08-02T00:26:07.652Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "21212",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-08-02T00:31:09.399Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "1",
+        "object_repr": "ExxoSA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-08-02T00:31:20.747Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "testenovo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2017-08-02T00:31:29.366Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Development",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2017-08-02T00:31:37.402Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Production",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2017-08-02T00:31:43.768Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Acceptance",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2017-08-02T00:31:48.576Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "4",
+        "object_repr": "Training",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2017-08-02T00:31:53.660Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "5",
+        "object_repr": "Demo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2017-08-02T00:32:05.959Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "hostname1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2017-08-02T00:32:18.472Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "2",
+        "object_repr": "Gerd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2017-08-02T00:32:23.467Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "1",
+        "object_repr": "GSD",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2017-08-02T00:32:31.141Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "XXBTCUSR02",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2017-08-02T00:32:55.576Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "rdisp/TRACE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2017-08-02T00:33:13.363Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "rdisp/max_wp_runtime",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2017-08-02T00:33:37.338Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "3",
+        "object_repr": "Petr",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2017-08-02T00:33:44.585Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "petro1.petrobras.com.br",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2017-08-02T00:33:51.580Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "petro2.petro.com.br",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2017-08-02T00:34:19.407Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "PET",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2017-08-02T00:34:38.965Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "gerd2.gerd.net",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2017-08-02T00:34:47.948Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "PPP",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2017-08-02T00:37:01.241Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "ST-DIA-MDG",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2017-08-02T00:37:17.214Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Bug",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2017-08-02T00:37:22.074Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Bug",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2017-08-02T00:37:29.199Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Upgrade Information",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2017-08-02T00:37:33.380Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "123123 - asdasdasd asd asd asd asd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2017-08-02T00:37:41.899Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "123123123 - aisjljaskd k.ajsd asd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2017-08-02T00:37:51.284Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "21212",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2017-08-02T00:39:33.415Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "2",
+        "object_repr": "key",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "authtoken.token",
+    "pk": "26712958a14f223edf074d4c008aa429cf20c07f",
+    "fields": {
+        "user": 1,
+        "created": "2017-08-01T23:39:45.118Z"
     }
 }
-
 ]

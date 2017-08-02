@@ -7,8 +7,8 @@ from bratzsoft.accounts.models import Customer
 
 class HostAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
-    list_display = ('hostname', 'customer', 'ipv4', 'active')
-    search_fields = ['hostname', 'customer', 'ipv4']
+    list_display = ('hostname', 'customer', 'active')
+    search_fields = ['hostname', 'customer']
 
 class CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
