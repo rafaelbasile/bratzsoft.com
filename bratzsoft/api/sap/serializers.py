@@ -1,15 +1,15 @@
 
 from rest_framework import serializers
 
-from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, LinkURL, Note
+from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, Note
+
 
 class AbapUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AbapUser
         depth = 2
-        fields = ['id','username', 'sap_system', 'client', 'active']
-
+        fields = ['id', 'username', 'sap_system', 'client', 'active']
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -19,12 +19,14 @@ class CategorySerializer(serializers.ModelSerializer):
         depth = 1
         fields = ['id', 'name']
 
+
 class ComponentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Component
         depth = 1
-        fields =  ['id', 'name', 'description', 'active']
+        fields = ['id', 'name', 'description', 'active']
+
 
 class HostSerializer(serializers.ModelSerializer):
 
@@ -32,6 +34,7 @@ class HostSerializer(serializers.ModelSerializer):
         model = Host
         depth = 2
         fields = ['id', 'hostname', 'ipv4', 'active']
+
 
 class LandscapeRoleSerializer(serializers.ModelSerializer):
 
@@ -41,13 +44,6 @@ class LandscapeRoleSerializer(serializers.ModelSerializer):
         depth = 1
         fields = ['id', 'name', 'active']
 
-
-class linkURLSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = LinkURL
-        depth = 1
-        fields = ['id', 'link','Category']
 
 class NoteSerializer(serializers.ModelSerializer):
 
