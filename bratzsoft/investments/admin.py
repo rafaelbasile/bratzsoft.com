@@ -1,28 +1,25 @@
 from django.contrib import admin
-from .models import Loan, Stock, StockQuote
+from .models import Loan, RendaFixa, InvestmentFund
 # Register your models here.
 
 
-from django.contrib import admin
-
-
 class LoanAdmin(admin.ModelAdmin):
+#	readonly_fields = ('created_at', 'updated_at')
+    list_display = ('loan_name', 'person', 'date', 'value')
+    search_fields = 'loan_name', 'person')
+
+
+class RendaFixaAdmin(admin.ModelAdmin):
     #readonly_fields = ('created_at', 'updated_at')
-    list_display = ('name', 'date', 'value')
-    search_fields = ['name', 'description']
+#    list_display = ('name', 'symbol', 'sector', 'subSector', 'activity', 'market_segment')
+#    search_fields = ['symbol', 'name']
 
 
-class StockAdmin(admin.ModelAdmin):
-    #readonly_fields = ('created_at', 'updated_at')
-    list_display = ('name', 'symbol', 'sector', 'subSector', 'activity', 'market_segment')
-    search_fields = ['symbol', 'name']
-
-
-class StockQuoteAdmin(admin.ModelAdmin):
-    #readonly_fields = ('created_at', 'updated_at')
-    list_display = ('stock', 'date', 'value')
-    search_fields = ['stock', ]
+class InvestmentFundAdmin(admin.ModelAdmin):
+#   readonly_fields = ('created_at', 'updated_at')
+   list_display = ('product_type', 'signer', 'start_date', 'tax', 'validity_date', 'position')
+#   search_fields = ['stock', ]
 
 admin.site.register(Loan, LoanAdmin)
-admin.site.register(Stock, StockAdmin)
-admin.site.register(StockQuote, StockQuoteAdmin)
+admin.site.register(RendaFixa, RendaFixaAdmin)
+admin.site.register(InvestmentFund, InvestmentFundAdmin)
