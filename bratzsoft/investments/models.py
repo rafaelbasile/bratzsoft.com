@@ -13,7 +13,7 @@ class Loan(models.Model):
         return "%s - %s" % (self.person, self.loan_name)
 
 
-class RendaFixa(models.Model):
+class FixedIncome(models.Model):
 
     product_type = models.CharField(max_length=50)          # Tipo de Produto
     signer = models.CharField(max_length=100)               # Emissor
