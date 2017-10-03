@@ -10,8 +10,10 @@ Soon more info!
 
 # Overview
 
+This Project is under active discussions.
 # How to Contribute
 
+Contributions closed for now. Fork if wanted, but be aware that this can be decommissioned without further notice
 # How to Install
 
 ## Requirements
