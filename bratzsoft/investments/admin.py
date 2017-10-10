@@ -3,23 +3,20 @@ from .models import Loan, FixedIncome, InvestmentFund
 # Register your models here.
 
 
-#class LoanAdmin(admin.ModelAdmin):
-#	readonly_fields = ('created_at', 'updated_at')
-#    list_display = ('loan_name', 'person', 'date', 'value')
-#    search_fields = ('loan_name', 'person')
+class LoanAdmin(admin.ModelAdmin):
+	list_display = ('date', 'loan_name', 'person', 'value')
+	search_fields = ('loan_name', 'person')
 
 
-#class FixedIncomeAdmin(admin.ModelAdmin):
-#	 readonly_fields = ('created_at', 'updated_at')
-#    list_display = ('name', 'symbol', 'sector', 'subSector', 'activity', 'market_segment')
-#    search_fields = ['symbol', 'name']
+class FixedIncomeAdmin(admin.ModelAdmin):
+	list_display = ('product_type', 'signer', 'start_date', 'due_date', 'position')
+	search_fields = ('product_type', 'signer')
 
 
-#class InvestmentFundAdmin(admin.ModelAdmin):
-#   readonly_fields = ('created_at', 'updated_at')
-#   list_display = ('product_type', 'signer', 'start_date', 'tax', 'validity_date', 'position')
-#   search_fields = ['stock', ]
+class InvestmentFundAdmin(admin.ModelAdmin):
+	list_display = ('ativo', 'fund_type', 'net_value')
+	search_fields = ('ativo', 'fund_type',)
 
-#admin.site.register(Loan, LoanAdmin)
-#admin.site.register(FixedIncome, FixedIncomeAdmin)
-#admin.site.register(InvestmentFund, InvestmentFundAdmin)
+admin.site.register(Loan, LoanAdmin)
+admin.site.register(FixedIncome, FixedIncomeAdmin)
+admin.site.register(InvestmentFund, InvestmentFundAdmin)

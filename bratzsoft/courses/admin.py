@@ -26,6 +26,6 @@ class LessonAdmin(admin.ModelAdmin):
         MaterialInlineAdmin
     ]
 
-admin.site.register(Course, CourseAdmin)
-admin.site.register([Enrollment, Announcement, Comment, Material])
-admin.site.register(Lesson, LessonAdmin)
+#admin.site.register(Course, CourseAdmin)
+#admin.site.register([Enrollment, Announcement, Comment, Material])
+#admin.site.register(Lesson, LessonAdmin)
