@@ -34,8 +34,7 @@ class InvestmentFund(models.Model):
     FUND_TYPE_CHOICES = (
     ('RF', 'Renda Fixa'),
     ('MM', 'Multimercado'),
-    ('FI', 'Fundo Imobiliário'),
-)
+    ('FI', 'Fundo Imobiliário'),)
 
     ativo = models.CharField(max_length=100, unique=True)
     quota_date = models.DateField()
