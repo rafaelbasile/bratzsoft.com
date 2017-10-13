@@ -65,9 +65,16 @@ class Component(BaseModel):
 
 class Note(BaseModel):
 
+    PRIORITY = (
+        ('M', 'Medium'),
+        ('L', 'Low'),
+        ('H', 'High'),
+        ('VH', 'Very High'),)
+
     number = models.PositiveIntegerField()
     version = models.PositiveIntegerField()
     title = models.CharField(max_length=200)
+    priority = models.CharField(max_length=2, choices=PRIORITY)
     component = models.ForeignKey(Component, on_delete=models.CASCADE)
     relesed_on = models.DateField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
