@@ -106,3 +106,4 @@ ENV/
 staticsfiles/
 .venv/
 db.sqlite3
+requirements/
