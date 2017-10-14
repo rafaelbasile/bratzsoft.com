@@ -16,6 +16,10 @@ This Project is under active discussions.
 Contributions closed for now. Fork if wanted, but be aware that this can be decommissioned without further notice
 # How to Install
 
+# How to Upgrade Packages
+Under the virtual environment, at the root of the project run:
+python upgrade_pip.py
+
 ## Requirements
 
 ## License
