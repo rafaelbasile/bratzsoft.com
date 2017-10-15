@@ -2,21 +2,14 @@ from django.shortcuts import render
 
 from rest_framework import generics, viewsets
 
-from bratzsoft.accounts.models import Customer
+
 from bratzsoft.sap.models import AbapUser, Category, Component, Host, LandscapeRole, Note
 from bratzsoft.api.sap.serializers import AbapUserSerializer, CategorySerializer, ComponentSerializer, HostSerializer,LandscapeRoleSerializer, NoteSerializer
-from bratzsoft.api.accounts.serializers import CustomerSerializer
 
 
 
-class CustomerList(generics.ListAPIView):
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
 
 
-class CustomerViewSet(viewsets.ModelViewSet):
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
 
 class AbapUserViewSet(viewsets.ModelViewSet):
     queryset = AbapUser.objects.all()
@@ -24,7 +17,7 @@ class AbapUserViewSet(viewsets.ModelViewSet):
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
-    serializer_class = CustomerSerializer
+    serializer_class = CategorySerializer
 
 class ComponentViewSet(viewsets.ModelViewSet):
     queryset = Component.objects.all()
@@ -42,12 +35,6 @@ class LandscapeRoleViewSet(viewsets.ModelViewSet):
 class NoteViewSet(viewsets.ModelViewSet):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
-
-
-class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
-
 
 class AbapUserList(generics.ListCreateAPIView):
     queryset = AbapUser.objects.all()

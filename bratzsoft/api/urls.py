@@ -5,12 +5,12 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.authtoken import views as drf_views
 from rest_framework.routers import DefaultRouter
 
-from .views import CustomerViewSet, AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, NoteViewSet, AbapUserList
+from .views import  AbapUserViewSet, CategoryViewSet, ComponentViewSet, HostViewSet, LandscapeRoleViewSet, NoteViewSet, AbapUserList
 
 
 # Create a router and register our viewsets with it.
 corerouter = DefaultRouter()
-corerouter.register(r'customers', CustomerViewSet)
+
 
 
 

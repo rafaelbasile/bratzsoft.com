@@ -2,13 +2,13 @@
 from django.contrib import admin
 from django.conf import settings
 from bratzsoft.sap.models import Host, Note, SAPSystem, LandscapeRole, Category, Component, Parameter, AbapUser
-from bratzsoft.accounts.models import Customer
+#from bratzsoft.accounts.models import Customer
 
 
 class HostAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
-    list_display = ('hostname', 'customer', 'active')
-    search_fields = ['hostname', 'customer']
+    list_display = ('hostname', 'active')
+    search_fields = ['hostname']
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -26,9 +26,9 @@ class NoteAdmin(admin.ModelAdmin):
 
 class SAPSystemAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
-    list_display = ('sid', 'instance_number', 'customer', 'active')
-    search_fields = ('sid', 'customer')
-    list_filter = ('customer', 'sid', 'active')
+    list_display = ('sid', 'instance_number', 'active')
+    search_fields = ('sid',)
+    list_filter = ('sid', 'active')
 
 
 class LandscapeRoleAdmin(admin.ModelAdmin):

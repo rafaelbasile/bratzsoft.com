@@ -41,10 +41,10 @@ IGNORABLE_404_URLS = [
 ADMIN_SITE_HEADER = "BratzSoft"
 
 # Auth
-LOGIN_URL = 'accounts:login'
-LOGIN_REDIRECT_URL = 'core:home'
-LOGOUT_URL = 'accounts:logout'
-AUTH_USER_MODEL = 'accounts.User'
+#LOGIN_URL = 'accounts:login'
+#LOGIN_REDIRECT_URL = 'core:home'
+#LOGOUT_URL = 'accounts:logout'
+#AUTH_USER_MODEL = 'accounts.User'
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -80,7 +80,7 @@ OWN_APPS = [
     'bratzsoft.sap',
     'bratzsoft.api',
 
-    'bratzsoft.accounts',
+    #'bratzsoft.accounts',
     'bratzsoft.courses',
     'bratzsoft.investments',
     'bratzsoft.medical',
