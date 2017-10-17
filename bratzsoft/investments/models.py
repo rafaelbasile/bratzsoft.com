@@ -48,3 +48,24 @@ class InvestmentFund(models.Model):
         return self.ativo
 
 
+class Stock(models.Model):
+    OPERATION_TYPE = (
+        ('BUY', 'Buy'),
+        ('SEL', 'Sell'),
+        ('DIV', 'Dividends'),
+        ('SPL', 'Split'),
+        ('AGR', 'Aggregation'),)
+
+    symbol = models.CharField(max_length=6, unique=True)
+
+    name = models.CharField(max_length=100, null=True, blank=True)
+    operation_type = models.CharField(null=True,blank=True,max_length=3, choices=OPERATION_TYPE)
+    operation_date = models.DateField()
+    quantity = models.PositiveIntegerField()
+    price = models.DecimalField(decimal_places=9,max_digits=15)
+    commission = models.DecimalField(decimal_places=2,max_digits=6)
+    notes = models.TextField()
+
+
+
+

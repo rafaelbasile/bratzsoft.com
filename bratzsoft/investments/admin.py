@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Loan, FixedIncome, InvestmentFund
+from .models import Loan, FixedIncome, InvestmentFund, Stock
 # Register your models here.
 
 
@@ -17,6 +17,13 @@ class InvestmentFundAdmin(admin.ModelAdmin):
 	list_display = ('ativo', 'fund_type', 'net_value')
 	search_fields = ('ativo', 'fund_type',)
 
+
+class StockAdmin(admin.ModelAdmin):
+	list_display = ('operation_type', 'symbol', 'quantity', 'price')
+	search_fields = ('symbol',)
+
+
+admin.site.register(Stock, StockAdmin)
 admin.site.register(Loan, LoanAdmin)
 admin.site.register(FixedIncome, FixedIncomeAdmin)
 admin.site.register(InvestmentFund, InvestmentFundAdmin)
