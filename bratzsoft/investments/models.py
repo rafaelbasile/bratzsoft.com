@@ -48,6 +48,13 @@ class InvestmentFund(models.Model):
         return self.ativo
 
 
+class Broker(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class Stock(models.Model):
     OPERATION_TYPE = (
         ('BUY', 'Buy'),
@@ -56,16 +63,18 @@ class Stock(models.Model):
         ('SPL', 'Split'),
         ('AGR', 'Aggregation'),)
 
-    symbol = models.CharField(max_length=6, unique=True)
-
+    symbol = models.CharField(max_length=6)
     name = models.CharField(max_length=100, null=True, blank=True)
     operation_type = models.CharField(null=True,blank=True,max_length=3, choices=OPERATION_TYPE)
     operation_date = models.DateField()
     quantity = models.PositiveIntegerField()
     price = models.DecimalField(decimal_places=9,max_digits=15)
     commission = models.DecimalField(decimal_places=2,max_digits=6)
-    notes = models.TextField()
+    broker = models.ForeignKey(Broker)
+    notes = models.TextField(null=True,blank=True)
 
+    def __str__(self):
+        return self.symbol
 
 
 

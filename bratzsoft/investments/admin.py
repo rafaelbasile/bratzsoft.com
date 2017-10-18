@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Loan, FixedIncome, InvestmentFund, Stock
+from .models import Loan, FixedIncome, InvestmentFund, Stock, Broker
 # Register your models here.
 
 
@@ -19,10 +19,18 @@ class InvestmentFundAdmin(admin.ModelAdmin):
 
 
 class StockAdmin(admin.ModelAdmin):
-	list_display = ('operation_type', 'symbol', 'quantity', 'price')
+	list_display = ('symbol', 'quantity', 'price', 'operation_type', 'operation_date', 'broker',)
 	search_fields = ('symbol',)
+	list_filter = ('symbol','operation_type','broker',)
 
 
+class BrokerAdmin(admin.ModelAdmin):
+	list_display = ('name',)
+	search_fields = ('name',)
+
+
+
+admin.site.register(Broker, BrokerAdmin)
 admin.site.register(Stock, StockAdmin)
 admin.site.register(Loan, LoanAdmin)
 admin.site.register(FixedIncome, FixedIncomeAdmin)
