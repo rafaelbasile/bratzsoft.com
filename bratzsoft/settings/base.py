@@ -81,7 +81,7 @@ OWN_APPS = [
     'bratzsoft.api',
 
     #'bratzsoft.accounts',
-    'bratzsoft.courses',
+    #'bratzsoft.courses',
     'bratzsoft.investments',
     'bratzsoft.medical',
 ]
