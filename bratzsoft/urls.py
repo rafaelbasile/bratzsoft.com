@@ -50,6 +50,7 @@ urlpatterns = [
     #url(r'^courses/', include('bratzsoft.accounts.urls', namespace='courses')),
     url(r'^api/', include('bratzsoft.api.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^investments/', include('bratzsoft.investments.urls')),
 ]
 
 #if settings.DEBUG:
