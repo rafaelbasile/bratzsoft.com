@@ -1,0 +1,1069 @@
+[
+{
+    "model": "investments.companysector",
+    "pk": 1,
+    "fields": {
+        "name": "Consumo C\u00edclico"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 2,
+    "fields": {
+        "name": "Financeiro e Outros"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 3,
+    "fields": {
+        "name": "Utilidade P\u00fablica"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 4,
+    "fields": {
+        "name": "Sa\u00fade"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 5,
+    "fields": {
+        "name": "Bens Industriais"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 6,
+    "fields": {
+        "name": "Consumo N\u00e3o C\u00edclico"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 7,
+    "fields": {
+        "name": "Alimentos Diversos"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 8,
+    "fields": {
+        "name": "Constru\u00e7\u00e3o e Transporte"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 9,
+    "fields": {
+        "name": "Materiais B\u00e1sicos"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 10,
+    "fields": {
+        "name": "N\u00e3o Classificados"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 11,
+    "fields": {
+        "name": "Petr\u00f3leo G\u00e1s e Biocombust\u00edveis"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 12,
+    "fields": {
+        "name": "Tecnologia Da Informa\u00e7\u00e3o"
+    }
+},
+{
+    "model": "investments.companysector",
+    "pk": 13,
+    "fields": {
+        "name": "Telecomunica\u00e7\u00f5es"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 1,
+    "fields": {
+        "name": "Tecidos Vestu\u00e1rio e Cal\u00e7ados"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 2,
+    "fields": {
+        "name": "Servi\u00e7os Financeiros Diversos"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 3,
+    "fields": {
+        "name": "Energia El\u00e9trica"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 4,
+    "fields": {
+        "name": "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 5,
+    "fields": {
+        "name": "Previd\u00eancia e Seguros"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 6,
+    "fields": {
+        "name": "Viagens e Lazer"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 7,
+    "fields": {
+        "name": "Com\u00e9rcio"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 8,
+    "fields": {
+        "name": "M\u00e1quinas e Equipamentos"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 9,
+    "fields": {
+        "name": "Diversos"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 10,
+    "fields": {
+        "name": "Bebidas"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 11,
+    "fields": {
+        "name": "Constru\u00e7\u00e3o Civil"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 12,
+    "fields": {
+        "name": "Constru\u00e7\u00e3o e Engenharia"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 13,
+    "fields": {
+        "name": "Com\u00e9rcio"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 14,
+    "fields": {
+        "name": "Produtos de Uso Pessoal e de Limpeza"
+    }
+},
+{
+    "model": "investments.companysubsector",
+    "pk": 15,
+    "fields": {
+        "name": "Intermedi\u00e1rios Financeiros"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 1,
+    "fields": {
+        "name": "Cal\u00e7ados"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 2,
+    "fields": {
+        "name": "Servi\u00e7os Financeiros Diversos"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 3,
+    "fields": {
+        "name": "Energia El\u00e9trica"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 4,
+    "fields": {
+        "name": "Servi\u00e7os M\u00e9dicos Hospitalares. An\u00e1lises e Diagn\u00f3sticos"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 5,
+    "fields": {
+        "name": "Seguradoras"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 6,
+    "fields": {
+        "name": "Viagens e Turismo"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 7,
+    "fields": {
+        "name": "Tecidos Vestu\u00e1rio e Cal\u00e7ados"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 8,
+    "fields": {
+        "name": "Motores, Compressores e Outros"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 9,
+    "fields": {
+        "name": "Produtos Diversos"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 10,
+    "fields": {
+        "name": "Cervejas e Refrigerantes"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 11,
+    "fields": {
+        "name": "Edifica\u00e7\u00f5es"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 12,
+    "fields": {
+        "name": "Vestu\u00e1rio"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 13,
+    "fields": {
+        "name": "Produtos para Constru\u00e7\u00e3o"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 14,
+    "fields": {
+        "name": "Produtos de Uso Pessoal"
+    }
+},
+{
+    "model": "investments.companysegment",
+    "pk": 15,
+    "fields": {
+        "name": "Bancos"
+    }
+},
+{
+    "model": "investments.listingsegment",
+    "pk": 1,
+    "fields": {
+        "name": "Cia. Novo Mercado (Tag Along: 100% ON)"
+    }
+},
+{
+    "model": "investments.listingsegment",
+    "pk": 2,
+    "fields": {
+        "name": "N\u00edvel 2 de Governan\u00e7a Corporativa (Tag Along: 100% ON e PN e UNIT \u2265 80%)"
+    }
+},
+{
+    "model": "investments.listingsegment",
+    "pk": 3,
+    "fields": {
+        "name": "Tradicional (Tag Along: 80% ON)"
+    }
+},
+{
+    "model": "investments.listingsegment",
+    "pk": 4,
+    "fields": {
+        "name": "N\u00edvel 1 de Governan\u00e7a Corporativa (Tag Along: 80% ON e PN)"
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 1,
+    "fields": {
+        "symbol": "GRND3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 2,
+    "fields": {
+        "symbol": "CIEL3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 3,
+    "fields": {
+        "symbol": "TIET11",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 4,
+    "fields": {
+        "symbol": "PARD3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 5,
+    "fields": {
+        "symbol": "ODPV3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 6,
+    "fields": {
+        "symbol": "PSSA3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 7,
+    "fields": {
+        "symbol": "FLRY3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 8,
+    "fields": {
+        "symbol": "CVCB3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 9,
+    "fields": {
+        "symbol": "ARZZ3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 10,
+    "fields": {
+        "symbol": "WEGE3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 11,
+    "fields": {
+        "symbol": "HYPE3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 12,
+    "fields": {
+        "symbol": "EGIE3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 13,
+    "fields": {
+        "symbol": "ABEV3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 14,
+    "fields": {
+        "symbol": "EZTC3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 15,
+    "fields": {
+        "symbol": "HGTX3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 16,
+    "fields": {
+        "symbol": "PTBL3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 17,
+    "fields": {
+        "symbol": "LREN3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 18,
+    "fields": {
+        "symbol": "NATU3",
+        "stock_type": "ON",
+        "description": ""
+    }
+},
+{
+    "model": "investments.stock",
+    "pk": 19,
+    "fields": {
+        "symbol": "ITUB4",
+        "stock_type": "PN",
+        "description": ""
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 1,
+    "fields": {
+        "name": "GRENDENE S.A.",
+        "symbol": "GRND",
+        "cnpj": "89850341000160",
+        "activity": "Fabrica\u00e7\u00e3o de Cal\u00e7ados em Geral",
+        "sector": 1,
+        "subsector": 1,
+        "market_segment": 1,
+        "listing_segment": 1,
+        "market_value": "R$ 8.035.238.400",
+        "ev": "R$ 6.667.238.400",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Alexandre G. Bartelle Participa\u00e7\u00f5es S.A. (31,03%)",
+        "site": "http://www.grendene.com.br",
+        "headquarters": "Sobral - CE",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=19615",
+        "shareholders": 12343,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-10-26",
+        "stocks": [
+            1
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 2,
+    "fields": {
+        "name": "CIELO S.A.",
+        "symbol": "CIEL",
+        "cnpj": "01.027.058/0001-91",
+        "activity": "Empresa Prestadora de Servi\u00e7os de Adquir\u00eancia E Meios de Pagamento.",
+        "sector": 2,
+        "subsector": 2,
+        "market_segment": 2,
+        "listing_segment": 1,
+        "market_value": "R$ 59.416.745.384",
+        "ev": "R$ 64.916.745.384",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Bb Banco de Investimento S.A. (28,65%)",
+        "site": "http://www.cielo.com.br",
+        "headquarters": "Barueri - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=21733",
+        "shareholders": 21260,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-26",
+        "stocks": [
+            2
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 3,
+    "fields": {
+        "name": "AES TIETE S.A.",
+        "symbol": "TIET",
+        "cnpj": "04.128.563/0001-10",
+        "activity": "Gera\u00e7\u00e3o de Energia El\u00e9trica",
+        "sector": 3,
+        "subsector": 3,
+        "market_segment": 3,
+        "listing_segment": 2,
+        "market_value": "R$ 15.079.723.237",
+        "ev": "None",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Aes Holdings Brasil Ltda. (61,57%)",
+        "site": "http://www.aestiete.com.br",
+        "headquarters": "Barueri - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=18970",
+        "shareholders": 22807,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-11-01",
+        "stocks": [
+            3
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 4,
+    "fields": {
+        "name": "INSTITUTO HERMES PARDINI S.A.",
+        "symbol": "PARD",
+        "cnpj": "19.378.769/0001-76",
+        "activity": "Presta\u00e7\u00e3o de Servi\u00e7os de Medicina Diagn\u00f3stica.",
+        "sector": 4,
+        "subsector": 4,
+        "market_segment": 4,
+        "listing_segment": 1,
+        "market_value": "R$ 4.094.390.880",
+        "ev": "R$ 4.186.390.880",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Ap Participa\u00e7\u00f5es E Gest\u00e3o de Neg\u00f3cios Eireli (21,02%)",
+        "site": "http://www3.hermespardini.com.br/ri",
+        "headquarters": "R Aimor\u00e9s. 66 - CEP: 30140070 Cidade: Diversos UF:AM",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=24090",
+        "shareholders": 3841,
+        "category": "NC",
+        "ibov": false,
+        "next_balance": "2017-11-13",
+        "stocks": [
+            4
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 5,
+    "fields": {
+        "name": "ODONTOPREV S.A.",
+        "symbol": "ODPV",
+        "cnpj": "58.119.199/0001-51",
+        "activity": "Operadora de Planos Odontol\u00f3gicos",
+        "sector": 4,
+        "subsector": 4,
+        "market_segment": 4,
+        "listing_segment": 1,
+        "market_value": "R$ 8.559.159.099",
+        "ev": "R$ 8.059.159.099",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Bradesco Sa\u00fade S/a (50,01%)",
+        "site": "http://www.odontoprev.com.br/ri",
+        "headquarters": "Barueri - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=20125",
+        "shareholders": 3008,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-10-25",
+        "stocks": [
+            5
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 6,
+    "fields": {
+        "name": "PORTO SEGURO S.A.",
+        "symbol": "PSSA",
+        "cnpj": "02.149.205/0001-69",
+        "activity": "Gest\u00e3o de Participa\u00e7\u00f5es Societ\u00e1rias (holding)",
+        "sector": 2,
+        "subsector": 5,
+        "market_segment": 5,
+        "listing_segment": 1,
+        "market_value": "R$ 12.359.492.537",
+        "ev": "R$ 2.404.492.537",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Porto Seguro Itau-unibanco Participa\u00e7\u00f5es S.A. (70,82%)",
+        "site": "http://www.portoseguro.com.br",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=16659",
+        "shareholders": 4606,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-10-31",
+        "stocks": [
+            6
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 7,
+    "fields": {
+        "name": "FLEURY S.A.",
+        "symbol": "FLRY",
+        "cnpj": "60.840.055/0001-31",
+        "activity": "(i) A Presta\u00e7\u00e3o de Servi\u00e7os M\u00e9dicos E Medicina Diagn\u00f3stica. (ii) A Consultoria. Assessoria. Cursos E",
+        "sector": 4,
+        "subsector": 4,
+        "market_segment": 4,
+        "listing_segment": 1,
+        "market_value": "R$ 9.856.123.055",
+        "ev": "R$ 10.252.123.055",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Bradseg Participa\u00e7\u00f5es Sa (16,28%)",
+        "site": "http://www.fleury.com.br/ri",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=21881",
+        "shareholders": 1691,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-10-26",
+        "stocks": [
+            7
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 8,
+    "fields": {
+        "name": "CVC BRASIL OPERADORA E AG\u00caNCIA DE VIAGENS S.A.",
+        "symbol": "CVCB",
+        "cnpj": "10.760.260/0001-19",
+        "activity": "Servi\u00e7os de Turismo. Compreendendo A Intermedia\u00e7\u00e3o. Individualmente Ou Na Forma Agregada. de Passage",
+        "sector": 1,
+        "subsector": 6,
+        "market_segment": 6,
+        "listing_segment": 1,
+        "market_value": "R$ 6.110.378.145",
+        "ev": "R$ 6.541.378.145",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Fip Gjp (7,59%)",
+        "site": "http://www.cvc.com.br/ri",
+        "headquarters": "Barueri - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=23310",
+        "shareholders": 6795,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-11-08",
+        "stocks": [
+            8
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 9,
+    "fields": {
+        "name": "AREZZO IND\u00daSTRIA E COM\u00c9RCIO S.A.",
+        "symbol": "ARZZ",
+        "cnpj": "16.590.234/0001-76",
+        "activity": "O Principal Ramo de Atividade Da Companhia \u00c9 A Industrializa\u00e7\u00e3o E A Comercializa\u00e7\u00e3o de Artigos de Co",
+        "sector": 1,
+        "subsector": 7,
+        "market_segment": 7,
+        "listing_segment": 1,
+        "market_value": "R$ 4.785.419.169",
+        "ev": "R$ 4.586.419.169",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Anderson Lemos Birman (34,56%)",
+        "site": "http://www.arezzoco.com.br",
+        "headquarters": "Belo Horizonte - MG",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=22349",
+        "shareholders": 1059,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-10-30",
+        "stocks": [
+            9
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 10,
+    "fields": {
+        "name": "WEG S.A.",
+        "symbol": "WEGE",
+        "cnpj": "84.429.695/0001-11",
+        "activity": "M\u00e1quinas Pesadas",
+        "sector": 5,
+        "subsector": 8,
+        "market_segment": 8,
+        "listing_segment": 1,
+        "market_value": "R$ 35.757.920.633",
+        "ev": "R$ 35.339.920.633",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Wpa Participa\u00e7\u00f5es E Servi\u00e7os S.A. (50,09%)",
+        "site": "http://www.weg.net/br",
+        "headquarters": "Jaragu\u00e1 do Sul - SC",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=5410",
+        "shareholders": 14082,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-25",
+        "stocks": [
+            10
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 11,
+    "fields": {
+        "name": "HYPERMARCAS S.A.",
+        "symbol": "HYPE",
+        "cnpj": "02.932.074/0001-91",
+        "activity": "Produ\u00e7\u00e3o E Venda de Bens de Consumo E Medicamentos",
+        "sector": 6,
+        "subsector": 9,
+        "market_segment": 9,
+        "listing_segment": 1,
+        "market_value": "R$ 21.578.284.988",
+        "ev": "R$ 20.108.284.988",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Jo\u00e3o Alves de Queiroz Filho (21,42%)",
+        "site": "http://www.hypermarcas.com.br",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=21431",
+        "shareholders": 9653,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-27",
+        "stocks": [
+            11
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 12,
+    "fields": {
+        "name": "ENGIE BRASIL ENERGIA S.A.",
+        "symbol": "EGIE",
+        "cnpj": "02.474.103/0001-19",
+        "activity": "Gera\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Energia El\u00e9trica",
+        "sector": 3,
+        "subsector": 3,
+        "market_segment": 3,
+        "listing_segment": 1,
+        "market_value": "R$ 23.622.739.928",
+        "ev": "R$ 25.337.739.928",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Engie Brasil Participa\u00e7\u00f5es Ltda. (68,71%)",
+        "site": "http://www.engie.com.br",
+        "headquarters": "Florian\u00f3polis - SC",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=17329",
+        "shareholders": 8025,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-26",
+        "stocks": [
+            12
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 13,
+    "fields": {
+        "name": "AMBEV S.A.",
+        "symbol": "ABEV",
+        "cnpj": "07.526.557/0001-00",
+        "activity": "Fabrica\u00e7\u00e3o E Distribui\u00e7\u00e3o de Cervejas. Refrigerantes E Bebidas N\u00e3o Carbonatadas E N\u00e3o Alco\u00f3licas.",
+        "sector": 6,
+        "subsector": 10,
+        "market_segment": 10,
+        "listing_segment": 3,
+        "market_value": "R$ 334.785.208.425",
+        "ev": "R$ 330.937.208.425",
+        "bookkeeper": "BRADESCO",
+        "majority_shareholder": "Interbrew International Bv (53,71%)",
+        "site": "http://www.ambev.com.br/investidores",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=23264",
+        "shareholders": 52816,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-26",
+        "stocks": [
+            13
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 14,
+    "fields": {
+        "name": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
+        "symbol": "EZTC",
+        "cnpj": "08.312.229/0001-73",
+        "activity": "(a) Incorpora\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios de Qualquer Natureza. (b) Adminis",
+        "sector": 1,
+        "subsector": 11,
+        "market_segment": 11,
+        "listing_segment": 1,
+        "market_value": "R$ 3.771.940.759",
+        "ev": "R$ 3.478.940.759",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Ez Participa\u00e7\u00f5es Ltda (31,56%)",
+        "site": "http://www.eztec.com.br/ri",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=20770",
+        "shareholders": 11316,
+        "category": "CL",
+        "ibov": false,
+        "next_balance": "2017-11-10",
+        "stocks": [
+            14
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 15,
+    "fields": {
+        "name": "CIA HERING",
+        "symbol": "HGTX",
+        "cnpj": "78.876.950/0001-71",
+        "activity": "Confec\u00e7\u00e3o de Artigos Do Vestu\u00e1rio E Acess\u00f3rios",
+        "sector": 1,
+        "subsector": 1,
+        "market_segment": 12,
+        "listing_segment": 1,
+        "market_value": "R$ 4.984.783.927",
+        "ev": "R$ 4.800.783.927",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "G\u00e1vea Investimentos (14,48%)",
+        "site": "http://www.ciahering.com.br",
+        "headquarters": "Blumenau - SC",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=14761",
+        "shareholders": 14310,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-26",
+        "stocks": [
+            15
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 16,
+    "fields": {
+        "name": "PBG S/A",
+        "symbol": "PTBL",
+        "cnpj": "83.475.913/0001-91",
+        "activity": "Industrializa\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Revestimentos Cer\u00e2micos",
+        "sector": 5,
+        "subsector": 12,
+        "market_segment": 13,
+        "listing_segment": 1,
+        "market_value": "R$ 944.591.561",
+        "ev": "R$ 1.394.591.561",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "C\u00e9sar Gomes Junior (16,36%)",
+        "site": "http://www.portobello.com.br",
+        "headquarters": "Tijucas - SC",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=13773",
+        "shareholders": 12090,
+        "category": "EQ",
+        "ibov": false,
+        "next_balance": "2017-11-10",
+        "stocks": [
+            16
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 17,
+    "fields": {
+        "name": "LOJAS RENNER S.A.",
+        "symbol": "LREN",
+        "cnpj": "92.754.738/0001-62",
+        "activity": "Loja de Departamentos (com\u00e9rcio Varejista)",
+        "sector": 1,
+        "subsector": 13,
+        "market_segment": 7,
+        "listing_segment": 1,
+        "market_value": "R$ 25.817.222.843",
+        "ev": "R$ 26.996.222.843",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Trowe Price Associates. Inc (gestor/administrador - Vide Item 15.8 A Seguir) (14,69%)",
+        "site": "http://www.lojasrenner.com.br",
+        "headquarters": "Porto Alegre - RS",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=8133",
+        "shareholders": 5258,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-11-09",
+        "stocks": [
+            17
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 18,
+    "fields": {
+        "name": "NATURA COSMETICOS S.A.",
+        "symbol": "NATU",
+        "cnpj": "71.673.990/0001-77",
+        "activity": "Com\u00e9rcio Atacadista de Com\u00e9rcio E Produtos de Perfumaria",
+        "sector": 6,
+        "subsector": 14,
+        "market_segment": 14,
+        "listing_segment": 1,
+        "market_value": "R$ 13.226.108.227",
+        "ev": "R$ 15.208.108.227",
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Utopia Participa\u00e7\u00f5es S.A. (21,23%)",
+        "site": "http://www.natura.net",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=19550",
+        "shareholders": 13257,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-11-14",
+        "stocks": [
+            18
+        ]
+    }
+},
+{
+    "model": "investments.company",
+    "pk": 19,
+    "fields": {
+        "name": "ITAU UNIBANCO HOLDING S.A.",
+        "symbol": "ITUB",
+        "cnpj": "60.872.504/0001-23",
+        "activity": "A Sociedade Tem Por Objeto A Atividade Banc\u00e1ria em Todas As Modalidades Autorizadas. Inclusive A de Opera\u00e7\u00f5es de C\u00e2mbio.",
+        "sector": 2,
+        "subsector": 15,
+        "market_segment": 15,
+        "listing_segment": 4,
+        "market_value": "R$ 271.849.301.526",
+        "ev": null,
+        "bookkeeper": "ITAU CORRETORA ACOES",
+        "majority_shareholder": "Iupar - Ita\u00fa Unibanco Participa\u00e7\u00f5es S.A. (51,00%)",
+        "site": "http://www.itau-unibanco.com.br/relacoes-com-investidores",
+        "headquarters": "S\u00e3o Paulo - SP",
+        "bovespa_page": "http://bvmf.bmfbovespa.com.br/cias-listadas/empresas-listadas/ResumoEmpresaPrincipal.aspx?codigoCvm=19348",
+        "shareholders": 108853,
+        "category": "EQ",
+        "ibov": true,
+        "next_balance": "2017-10-31",
+        "stocks": [
+            19
+        ]
+    }
+},
+{
+    "model": "investments.broker",
+    "pk": 1,
+    "fields": {
+        "name": "XP Investimentos"
+    }
+},
+{
+    "model": "investments.broker",
+    "pk": 2,
+    "fields": {
+        "name": "Clear"
+    }
+},
+{
+    "model": "investments.broker",
+    "pk": 3,
+    "fields": {
+        "name": "RICO.VC"
+    }
+},
+{
+    "model": "investments.transaction",
+    "pk": 1,
+    "fields": {
+        "stock": 1,
+        "operation_type": "BUY",
+        "operation_date": "2017-10-24",
+        "shares": 100,
+        "price": "12.320000000",
+        "commission": "23.53",
+        "broker": 1,
+        "notes": ""
+    }
+}
+]

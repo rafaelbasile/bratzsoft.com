@@ -895,15 +895,15 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$Xpmr2f4NcuuA$PSbotEO8PniHO/fSdOqKbNGg+b6JIZN6YFtiQtMoWFs=",
-        "last_login": "2017-10-24T02:45:33.338Z",
+        "last_login": "2017-10-24T02:58:31Z",
         "is_superuser": true,
         "username": "ebratz",
-        "first_name": "",
-        "last_name": "",
+        "first_name": "Eduardo",
+        "last_name": "Bratz",
         "email": "ebratz@gmail.com",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2017-10-24T02:44:45.896Z",
+        "date_joined": "2017-10-24T02:44:45Z",
         "groups": [],
         "user_permissions": []
     }
