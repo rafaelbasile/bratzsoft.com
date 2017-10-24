@@ -16,8 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from bratzsoft.sap import views as sap_views
+from bratzsoft.investments import views as inv_views
 
 urlpatterns = [
-    url(r'^$', sap_views.home),
+    url(r'^$', inv_views.home),
 ]
