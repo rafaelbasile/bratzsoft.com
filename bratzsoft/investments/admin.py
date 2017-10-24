@@ -30,9 +30,9 @@ class BrokerAdmin(admin.ModelAdmin):
 
 
 class CompanyAdmin(admin.ModelAdmin):
-	list_display = ( 'symbol', 'name', 'sector','category','next_balance',)
+	list_display = ( 'symbol', 'name', 'sector','category', 'shareholders', 'ibov', 'next_balance',)
 	search_fields = ('name','symbol','category', )
-	list_filter = ('symbol','sector','category',)
+	list_filter = ('symbol','sector','ibov', 'category',)
 
 class CompanySectorAdmin(admin.ModelAdmin):
 	list_display = ('name',)

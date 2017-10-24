@@ -47,20 +47,21 @@ class Company(models.Model):
     ('AL', 'Alerta'),
     ('NC', 'Não Classificada'),
     ('EQ', 'Equilibrada'),
+    ('CL', 'Cíclica'),
         )
 
 
     name = models.CharField(max_length=100)
     symbol = models.CharField(max_length=4)
     stocks = models.ManyToManyField(Stock)
-    cnpj = models.PositiveIntegerField()
-    activity = models.CharField(max_length=100)
+    cnpj = models.CharField(max_length=19)
+    activity = models.CharField(max_length=300)
     sector = models.ForeignKey(CompanySector, on_delete=models.CASCADE)
     subsector = models.ForeignKey(CompanySubSector, on_delete=models.CASCADE)
     market_segment = models.ForeignKey(CompanySegment, on_delete=models.CASCADE)
     listing_segment = models.ForeignKey(ListingSegment, on_delete=models.CASCADE)
-    market_value = models.CharField(max_length=100)
-    ev = models.CharField(max_length=100)
+    market_value = models.CharField(max_length=100, null=True, blank=True)
+    ev = models.CharField(max_length=100, null=True, blank=True)
     bookkeeper = models.CharField(max_length=100)
     majority_shareholder = models.CharField(max_length=100)
     site = models.URLField()
